@@ -1,0 +1,50 @@
+table GuestComplaints
+	lineageTag: c658f36f-5241-4025-a3aa-871a4f33fb0d
+
+	column HotelID
+		dataType: string
+		lineageTag: 15a52193-c3bb-4013-bbd4-7e6f6a2c97b6
+		summarizeBy: none
+		sourceColumn: HotelID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Month
+		dataType: int64
+		formatString: 0
+		lineageTag: 826adf22-419c-4cd7-82be-0c70ceb093b5
+		summarizeBy: sum
+		sourceColumn: Month
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category
+		dataType: string
+		lineageTag: 9ae10876-9088-4a31-847c-529adf75c9a8
+		summarizeBy: none
+		sourceColumn: Category
+
+		annotation SummarizationSetBy = Automatic
+
+	column Complaints
+		dataType: int64
+		formatString: 0
+		lineageTag: 62119f1c-41f7-40fa-a259-12de7104b8e8
+		summarizeBy: sum
+		sourceColumn: Complaints
+
+		annotation SummarizationSetBy = Automatic
+
+	partition GuestComplaints = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("E:\powerbi-dataviz-worldchamps-2027\data\PillowKey_Dataset.xlsx"), null, true),
+				    GuestComplaints_Sheet = Source{[Item="GuestComplaints",Kind="Sheet"]}[Data],
+				    #"Promoted Headers" = Table.PromoteHeaders(GuestComplaints_Sheet, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"HotelID", type text}, {"Month", Int64.Type}, {"Category", type text}, {"Complaints", Int64.Type}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

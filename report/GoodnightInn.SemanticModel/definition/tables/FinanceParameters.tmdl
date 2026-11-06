@@ -1,0 +1,50 @@
+table FinanceParameters
+	lineageTag: 424fae70-7f2b-46e1-81ba-acc0c92cd663
+
+	column Parameter
+		dataType: string
+		lineageTag: 0ab4540d-3248-4d5b-aec5-16fca5867621
+		summarizeBy: none
+		sourceColumn: Parameter
+
+		annotation SummarizationSetBy = Automatic
+
+	column Value
+		dataType: double
+		lineageTag: b3702917-3ed9-4fe2-bcbe-71e744594565
+		summarizeBy: sum
+		sourceColumn: Value
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Unit
+		dataType: string
+		lineageTag: 02ab6677-09e2-4ab6-afc2-7592f8c15f3c
+		summarizeBy: none
+		sourceColumn: Unit
+
+		annotation SummarizationSetBy = Automatic
+
+	column Notes
+		dataType: string
+		lineageTag: cafcb62d-3d71-4823-8f32-d1dbc4b239fd
+		summarizeBy: none
+		sourceColumn: Notes
+
+		annotation SummarizationSetBy = Automatic
+
+	partition FinanceParameters = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("E:\powerbi-dataviz-worldchamps-2027\data\PillowKey_Dataset.xlsx"), null, true),
+				    FinanceParameters_Sheet = Source{[Item="FinanceParameters",Kind="Sheet"]}[Data],
+				    #"Promoted Headers" = Table.PromoteHeaders(FinanceParameters_Sheet, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Parameter", type text}, {"Value", type number}, {"Unit", type text}, {"Notes", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

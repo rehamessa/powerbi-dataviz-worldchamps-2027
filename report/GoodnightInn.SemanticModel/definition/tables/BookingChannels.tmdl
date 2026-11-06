@@ -1,0 +1,77 @@
+table BookingChannels
+	lineageTag: 5e656ba5-39de-4034-9bbe-d3375dd254c6
+
+	column HotelID
+		dataType: string
+		lineageTag: 11802f89-ba0c-4aaa-aa7e-27488d5b188a
+		summarizeBy: none
+		sourceColumn: HotelID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Month
+		dataType: int64
+		formatString: 0
+		lineageTag: 897cf757-16b2-4c41-821e-f814e76ccd1f
+		summarizeBy: sum
+		sourceColumn: Month
+
+		annotation SummarizationSetBy = Automatic
+
+	column Channel
+		dataType: string
+		lineageTag: 98f68012-1037-4b94-bafe-2adac5d928b9
+		summarizeBy: none
+		sourceColumn: Channel
+
+		annotation SummarizationSetBy = Automatic
+
+	column Bookings
+		dataType: int64
+		formatString: 0
+		lineageTag: 5305046d-c551-4169-9840-b3a0233d9bed
+		summarizeBy: sum
+		sourceColumn: Bookings
+
+		annotation SummarizationSetBy = Automatic
+
+	column RoomNights
+		dataType: int64
+		formatString: 0
+		lineageTag: f0d6db1b-8c91-4b1f-b42a-83f3df7b2390
+		summarizeBy: sum
+		sourceColumn: RoomNights
+
+		annotation SummarizationSetBy = Automatic
+
+	column RoomRevenue
+		dataType: int64
+		formatString: 0
+		lineageTag: 7e9b15b0-09a0-490e-92e4-914b46ba5c21
+		summarizeBy: sum
+		sourceColumn: RoomRevenue
+
+		annotation SummarizationSetBy = Automatic
+
+	column DistributionCost
+		dataType: int64
+		formatString: 0
+		lineageTag: 0f908b48-a201-420e-b2a0-e052e798a8af
+		summarizeBy: sum
+		sourceColumn: DistributionCost
+
+		annotation SummarizationSetBy = Automatic
+
+	partition BookingChannels = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("E:\powerbi-dataviz-worldchamps-2027\data\PillowKey_Dataset.xlsx"), null, true),
+				    BookingChannels_Sheet = Source{[Item="BookingChannels",Kind="Sheet"]}[Data],
+				    #"Promoted Headers" = Table.PromoteHeaders(BookingChannels_Sheet, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"HotelID", type text}, {"Month", Int64.Type}, {"Channel", type text}, {"Bookings", Int64.Type}, {"RoomNights", Int64.Type}, {"RoomRevenue", Int64.Type}, {"DistributionCost", Int64.Type}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

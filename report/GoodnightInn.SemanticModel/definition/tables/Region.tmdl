@@ -1,0 +1,23 @@
+table Region
+	lineageTag: 0acb5376-9077-420d-990d-90f6e0dbcb39
+
+	column Column1
+		dataType: string
+		lineageTag: e12825e9-47b1-4adb-ad50-d8c970d26d31
+		summarizeBy: none
+		sourceColumn: Column1
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Region = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("E:\powerbi-dataviz-worldchamps-2027\data\PillowKey_Dataset.xlsx"), null, true),
+				    Region_Sheet = Source{[Item="Region",Kind="Sheet"]}[Data],
+				    #"Changed Type" = Table.TransformColumnTypes(Region_Sheet,{{"Column1", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

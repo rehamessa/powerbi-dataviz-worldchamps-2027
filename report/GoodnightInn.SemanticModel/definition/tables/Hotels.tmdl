@@ -1,0 +1,119 @@
+table Hotels
+	lineageTag: 5853f463-8f9d-4330-a344-93a4b5ab4648
+
+	column HotelID
+		dataType: string
+		lineageTag: d9c51927-851b-4e4f-9872-07bb0d26fd2d
+		summarizeBy: none
+		sourceColumn: HotelID
+
+		annotation SummarizationSetBy = Automatic
+
+	column HotelName
+		dataType: string
+		lineageTag: 58e9ce41-2797-4098-86b0-ad151fec4062
+		summarizeBy: none
+		sourceColumn: HotelName
+
+		annotation SummarizationSetBy = Automatic
+
+	column Brand
+		dataType: string
+		lineageTag: 246eb17a-0693-470a-be4f-1b1c76f84378
+		summarizeBy: none
+		sourceColumn: Brand
+
+		annotation SummarizationSetBy = Automatic
+
+	column City
+		dataType: string
+		lineageTag: f237727f-b00c-401e-b56c-8666fa6a83ec
+		summarizeBy: none
+		sourceColumn: City
+
+		annotation SummarizationSetBy = Automatic
+
+	column Country
+		dataType: string
+		lineageTag: 6756d720-08f1-48e7-8054-4b4de033fd4e
+		summarizeBy: none
+		sourceColumn: Country
+
+		annotation SummarizationSetBy = Automatic
+
+	column Region
+		dataType: string
+		lineageTag: da7e8e8c-9f05-49da-936c-629aa4c21ccd
+		summarizeBy: none
+		sourceColumn: Region
+
+		annotation SummarizationSetBy = Automatic
+
+	column Latitude
+		dataType: double
+		lineageTag: 85c4278b-2d5d-43fe-b4b5-b49bf755280b
+		summarizeBy: sum
+		sourceColumn: Latitude
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Longitude
+		dataType: double
+		lineageTag: 53ad2e39-2a77-473d-a668-44b8ffc1ec88
+		summarizeBy: sum
+		sourceColumn: Longitude
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column LocationType
+		dataType: string
+		lineageTag: 85a7a5d6-2e28-4686-a615-3e1e1ad278cf
+		summarizeBy: none
+		sourceColumn: LocationType
+
+		annotation SummarizationSetBy = Automatic
+
+	column Rooms
+		dataType: int64
+		formatString: 0
+		lineageTag: 810a1e06-53e9-46dc-a857-b533e4cb7826
+		summarizeBy: sum
+		sourceColumn: Rooms
+
+		annotation SummarizationSetBy = Automatic
+
+	column OpeningDate
+		dataType: int64
+		formatString: 0
+		lineageTag: dd13c05a-2a79-41e4-b64e-df8825302130
+		summarizeBy: sum
+		sourceColumn: OpeningDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column LastRenovationDate
+		dataType: int64
+		formatString: 0
+		lineageTag: 5fa8a2ea-c887-4bc9-97aa-1b397defc11a
+		summarizeBy: sum
+		sourceColumn: LastRenovationDate
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Hotels = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("E:\powerbi-dataviz-worldchamps-2027\data\PillowKey_Dataset.xlsx"), null, true),
+				    Hotels_Sheet = Source{[Item="Hotels",Kind="Sheet"]}[Data],
+				    #"Promoted Headers" = Table.PromoteHeaders(Hotels_Sheet, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"HotelID", type text}, {"HotelName", type text}, {"Brand", type text}, {"City", type text}, {"Country", type text}, {"Region", type text}, {"Latitude", type number}, {"Longitude", type number}, {"LocationType", type text}, {"Rooms", Int64.Type}, {"OpeningDate", Int64.Type}, {"LastRenovationDate", Int64.Type}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

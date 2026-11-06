@@ -1,0 +1,68 @@
+table GuestSegments
+	lineageTag: ad064fe1-0c48-464c-977e-410857bd7206
+
+	column HotelID
+		dataType: string
+		lineageTag: 1cbf9a8b-1070-4a97-922d-287caf9a1eef
+		summarizeBy: none
+		sourceColumn: HotelID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Month
+		dataType: int64
+		formatString: 0
+		lineageTag: 40af3b3c-89b8-42db-b3ce-0e0ab446ad68
+		summarizeBy: sum
+		sourceColumn: Month
+
+		annotation SummarizationSetBy = Automatic
+
+	column Segment
+		dataType: string
+		lineageTag: b991be7d-612c-4e84-8f94-ed311cf6a4f5
+		summarizeBy: none
+		sourceColumn: Segment
+
+		annotation SummarizationSetBy = Automatic
+
+	column Bookings
+		dataType: int64
+		formatString: 0
+		lineageTag: a58ed29b-c1ea-40c4-acdc-72c6753ed8f7
+		summarizeBy: sum
+		sourceColumn: Bookings
+
+		annotation SummarizationSetBy = Automatic
+
+	column RoomNights
+		dataType: int64
+		formatString: 0
+		lineageTag: 050f8352-e189-404b-a344-bdd9cbc446f7
+		summarizeBy: sum
+		sourceColumn: RoomNights
+
+		annotation SummarizationSetBy = Automatic
+
+	column RoomRevenue
+		dataType: int64
+		formatString: 0
+		lineageTag: 66e813ba-c64d-4673-8baa-cde976cfd725
+		summarizeBy: sum
+		sourceColumn: RoomRevenue
+
+		annotation SummarizationSetBy = Automatic
+
+	partition GuestSegments = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("E:\powerbi-dataviz-worldchamps-2027\data\PillowKey_Dataset.xlsx"), null, true),
+				    GuestSegments_Sheet = Source{[Item="GuestSegments",Kind="Sheet"]}[Data],
+				    #"Promoted Headers" = Table.PromoteHeaders(GuestSegments_Sheet, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"HotelID", type text}, {"Month", Int64.Type}, {"Segment", type text}, {"Bookings", Int64.Type}, {"RoomNights", Int64.Type}, {"RoomRevenue", Int64.Type}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,77 @@
+table Renovations
+	lineageTag: 49e4fbf2-828d-4707-8ede-9f335c280af7
+
+	column RenovationID
+		dataType: string
+		lineageTag: 7147320d-159f-4f31-8972-b1aca016b652
+		summarizeBy: none
+		sourceColumn: RenovationID
+
+		annotation SummarizationSetBy = Automatic
+
+	column HotelID
+		dataType: string
+		lineageTag: ecffdff6-9e51-4db6-8d1b-f97c41b39f83
+		summarizeBy: none
+		sourceColumn: HotelID
+
+		annotation SummarizationSetBy = Automatic
+
+	column StartDate
+		dataType: int64
+		formatString: 0
+		lineageTag: c409fae3-4da4-46e2-972a-fee2607401b0
+		summarizeBy: sum
+		sourceColumn: StartDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column EndDate
+		dataType: int64
+		formatString: 0
+		lineageTag: 45fba932-d72a-44af-97ef-0e4fad3fa1fa
+		summarizeBy: sum
+		sourceColumn: EndDate
+
+		annotation SummarizationSetBy = Automatic
+
+	column RenovationType
+		dataType: string
+		lineageTag: aa9d9717-a91c-4a49-b4ab-e6c3992f54ed
+		summarizeBy: none
+		sourceColumn: RenovationType
+
+		annotation SummarizationSetBy = Automatic
+
+	column RoomsOutOfServicePct
+		dataType: double
+		lineageTag: 8dc39e8f-f028-421e-8386-5f9209f27cfa
+		summarizeBy: sum
+		sourceColumn: RoomsOutOfServicePct
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CostUSD
+		dataType: int64
+		formatString: 0
+		lineageTag: be07f5bb-2b8b-4163-8c95-a59c95915b81
+		summarizeBy: sum
+		sourceColumn: CostUSD
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Renovations = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("E:\powerbi-dataviz-worldchamps-2027\data\PillowKey_Dataset.xlsx"), null, true),
+				    Renovations_Sheet = Source{[Item="Renovations",Kind="Sheet"]}[Data],
+				    #"Promoted Headers" = Table.PromoteHeaders(Renovations_Sheet, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"RenovationID", type text}, {"HotelID", type text}, {"StartDate", Int64.Type}, {"EndDate", Int64.Type}, {"RenovationType", type text}, {"RoomsOutOfServicePct", type number}, {"CostUSD", Int64.Type}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

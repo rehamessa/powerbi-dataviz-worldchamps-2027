@@ -1,0 +1,40 @@
+relationship AutoDetected_ccb9770f-c4da-439b-9daa-e04fdde65cc9
+	fromColumn: BookingChannels.HotelID
+	toColumn: Hotels.HotelID
+
+relationship AutoDetected_862f01b9-d24f-4cc1-8ea6-cfb45bd48cba
+	fromColumn: GuestComplaints.HotelID
+	toColumn: Hotels.HotelID
+
+relationship AutoDetected_94b75617-79eb-4210-9cc6-b3858e159bcc
+	fromColumn: GuestExperience.HotelID
+	toColumn: Hotels.HotelID
+
+relationship AutoDetected_0bbe304f-6db1-427a-88e5-7779478c2d2e
+	fromColumn: GuestSegments.HotelID
+	toColumn: Hotels.HotelID
+
+relationship AutoDetected_5ced6dcc-4dad-4fcb-88ce-a75e3591f2bd
+	fromColumn: MonthlyPerformance.HotelID
+	toColumn: Hotels.HotelID
+
+relationship AutoDetected_10abf245-0f45-450e-976f-5dcfc85d5858
+	fromColumn: Renovations.HotelID
+	toColumn: Hotels.HotelID
+
+relationship AutoDetected_3cfebcdc-f2c4-485e-ab2f-ad978b70a0e9
+	fromColumn: Hotels.Brand
+	toColumn: Brands.Brand
+
+relationship AutoDetected_b09ce6f9-4378-4e49-9c95-55a1e62cd988
+	fromColumn: InvestmentProjects.Brand
+	toColumn: Brands.Brand
+
+relationship AutoDetected_b304794b-2aed-43af-a4c6-cef4da3b5fa1
+	fromColumn: InvestmentScenarios.ProjectID
+	toColumn: InvestmentProjects.ProjectID
+
+relationship AutoDetected_445e5e51-b9bb-4711-ac82-820dade964e4
+	fromColumn: InvestmentScenarios.Scenario
+	toColumn: Scenario.Scenario
+

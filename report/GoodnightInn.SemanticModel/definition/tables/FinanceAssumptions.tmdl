@@ -1,0 +1,63 @@
+table FinanceAssumptions
+	lineageTag: 4cfc7794-d2c2-4ca2-ba61-0a7f54176707
+
+	column Year
+		dataType: int64
+		formatString: 0
+		lineageTag: 667af428-95a8-4d84-a463-db20ab0e96fd
+		summarizeBy: sum
+		sourceColumn: Year
+
+		annotation SummarizationSetBy = Automatic
+
+	column Region
+		dataType: string
+		lineageTag: b4fbc6c5-b1d7-4e25-aa0d-9ad9ac93addc
+		summarizeBy: none
+		sourceColumn: Region
+
+		annotation SummarizationSetBy = Automatic
+
+	column MarketDemandGrowthPct
+		dataType: double
+		lineageTag: 1207f309-d25c-4572-add0-2d1c908b24e9
+		summarizeBy: sum
+		sourceColumn: MarketDemandGrowthPct
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ADRInflationPct
+		dataType: double
+		lineageTag: 97253c78-6575-428a-a7b7-ea3168019f97
+		summarizeBy: sum
+		sourceColumn: ADRInflationPct
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CostInflationPct
+		dataType: double
+		lineageTag: 2e59ad83-ed6e-4710-a1c8-b94715863e71
+		summarizeBy: sum
+		sourceColumn: CostInflationPct
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition FinanceAssumptions = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("E:\powerbi-dataviz-worldchamps-2027\data\PillowKey_Dataset.xlsx"), null, true),
+				    FinanceAssumptions_Sheet = Source{[Item="FinanceAssumptions",Kind="Sheet"]}[Data],
+				    #"Promoted Headers" = Table.PromoteHeaders(FinanceAssumptions_Sheet, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Year", Int64.Type}, {"Region", type text}, {"MarketDemandGrowthPct", type number}, {"ADRInflationPct", type number}, {"CostInflationPct", type number}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

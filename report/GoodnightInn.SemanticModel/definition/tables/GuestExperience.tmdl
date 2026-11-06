@@ -1,0 +1,112 @@
+table GuestExperience
+	lineageTag: 82247b6f-1bb7-47b1-b260-3387643b71e5
+
+	column HotelID
+		dataType: string
+		lineageTag: 5ccb0e99-c299-4967-82d9-c6644abe0fa4
+		summarizeBy: none
+		sourceColumn: HotelID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Month
+		dataType: int64
+		formatString: 0
+		lineageTag: 93f59b2c-331a-43b1-9304-c244689b2fba
+		summarizeBy: sum
+		sourceColumn: Month
+
+		annotation SummarizationSetBy = Automatic
+
+	column SurveyResponses
+		dataType: int64
+		formatString: 0
+		lineageTag: 80c76551-a534-4c5d-96d2-d99524a75c21
+		summarizeBy: sum
+		sourceColumn: SurveyResponses
+
+		annotation SummarizationSetBy = Automatic
+
+	column OverallScore
+		dataType: double
+		lineageTag: 0cd23dfb-dcda-4327-9638-d81f0eacf434
+		summarizeBy: sum
+		sourceColumn: OverallScore
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column CleanlinessScore
+		dataType: double
+		lineageTag: 23e32404-037d-483f-9170-653f7f2c2a23
+		summarizeBy: sum
+		sourceColumn: CleanlinessScore
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ServiceScore
+		dataType: double
+		lineageTag: 15ca0d11-d9aa-41c9-b00c-4dcf476690a0
+		summarizeBy: sum
+		sourceColumn: ServiceScore
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column RoomComfortScore
+		dataType: double
+		lineageTag: 633dfb03-e118-4597-a38b-bd8b03685273
+		summarizeBy: sum
+		sourceColumn: RoomComfortScore
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column AmenitiesScore
+		dataType: double
+		lineageTag: 7c0c6b08-0604-46cd-bae8-4441123a77cd
+		summarizeBy: sum
+		sourceColumn: AmenitiesScore
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ValueForMoneyScore
+		dataType: double
+		lineageTag: 906f5786-9625-489d-bb53-99ab565ac51e
+		summarizeBy: sum
+		sourceColumn: ValueForMoneyScore
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column NetPromoterScore
+		dataType: double
+		lineageTag: 205f3cae-f6e4-4c9f-9b54-98440777022f
+		summarizeBy: sum
+		sourceColumn: NetPromoterScore
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition GuestExperience = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("E:\powerbi-dataviz-worldchamps-2027\data\PillowKey_Dataset.xlsx"), null, true),
+				    GuestExperience_Sheet = Source{[Item="GuestExperience",Kind="Sheet"]}[Data],
+				    #"Promoted Headers" = Table.PromoteHeaders(GuestExperience_Sheet, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"HotelID", type text}, {"Month", Int64.Type}, {"SurveyResponses", Int64.Type}, {"OverallScore", type number}, {"CleanlinessScore", type number}, {"ServiceScore", type number}, {"RoomComfortScore", type number}, {"AmenitiesScore", type number}, {"ValueForMoneyScore", type number}, {"NetPromoterScore", type number}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

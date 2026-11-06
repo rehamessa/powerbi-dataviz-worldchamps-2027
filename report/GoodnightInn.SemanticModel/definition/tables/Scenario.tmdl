@@ -1,0 +1,33 @@
+table Scenario
+	lineageTag: 610c885a-a763-4277-a85f-5f014e6d9501
+
+	column Scenario
+		dataType: string
+		lineageTag: 6aa88b82-8d86-4e8a-851f-f2e77c565a15
+		summarizeBy: none
+		sourceColumn: Scenario
+
+		annotation SummarizationSetBy = Automatic
+
+	column ScenarioOrder
+		dataType: int64
+		formatString: 0
+		lineageTag: 9c071d50-e64d-49ab-baf4-4f0d084600b9
+		summarizeBy: none
+		sourceColumn: ScenarioOrder
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Scenario = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("E:\powerbi-dataviz-worldchamps-2027\data\PillowKey_Dataset.xlsx"), null, true),
+				    Scenario_Sheet = Source{[Item="Scenario",Kind="Sheet"]}[Data],
+				    #"Promoted Headers" = Table.PromoteHeaders(Scenario_Sheet, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Scenario", type text}, {"ScenarioOrder", Int64.Type}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

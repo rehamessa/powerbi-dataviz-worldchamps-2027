@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "GoodnightInn"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "5ed02c1f-fe22-4a26-a404-3bee1315c8c9"
+  }
+}

@@ -1,0 +1,58 @@
+table Brands
+	lineageTag: e276c9d0-15dc-4423-9307-90734a8c0c16
+
+	column Brand
+		dataType: string
+		lineageTag: b2182733-8034-42e8-a226-a21ea3a28c0f
+		summarizeBy: none
+		sourceColumn: Brand
+
+		annotation SummarizationSetBy = Automatic
+
+	column Segment
+		dataType: string
+		lineageTag: b4aab25d-bb0d-4c0f-9134-48c404db3f6d
+		summarizeBy: none
+		sourceColumn: Segment
+
+		annotation SummarizationSetBy = Automatic
+
+	column Properties
+		dataType: int64
+		formatString: 0
+		lineageTag: cd9e4627-ef3c-4ddb-b260-3fc7f0d21395
+		summarizeBy: sum
+		sourceColumn: Properties
+
+		annotation SummarizationSetBy = Automatic
+
+	column Positioning
+		dataType: string
+		lineageTag: c95f32ba-6b9d-4004-9853-b8e53e7ed4ef
+		summarizeBy: none
+		sourceColumn: Positioning
+
+		annotation SummarizationSetBy = Automatic
+
+	column InvestmentBudgetUSD
+		dataType: int64
+		formatString: 0
+		lineageTag: d3a00168-8931-43c7-9d7e-7fbf0713d83d
+		summarizeBy: sum
+		sourceColumn: InvestmentBudgetUSD
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Brands = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("E:\powerbi-dataviz-worldchamps-2027\data\PillowKey_Dataset.xlsx"), null, true),
+				    Brands_Sheet = Source{[Item="Brands",Kind="Sheet"]}[Data],
+				    #"Promoted Headers" = Table.PromoteHeaders(Brands_Sheet, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Brand", type text}, {"Segment", type text}, {"Properties", Int64.Type}, {"Positioning", type text}, {"InvestmentBudgetUSD", Int64.Type}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

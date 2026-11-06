@@ -1,0 +1,150 @@
+table InvestmentScenarios
+	lineageTag: 99356aa7-26cc-4286-acf6-13682f21a76b
+
+	column ProjectID
+		dataType: string
+		lineageTag: abfac962-8f05-49b7-807a-46779482512e
+		summarizeBy: none
+		sourceColumn: ProjectID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Scenario
+		dataType: string
+		lineageTag: 2c4bd109-0d18-42a9-8efd-36e182780658
+		summarizeBy: none
+		sourceColumn: Scenario
+
+		annotation SummarizationSetBy = Automatic
+
+	column OccupancyChangePts
+		dataType: double
+		lineageTag: 4622c9db-e98d-43d7-8545-62a0ecf9a599
+		summarizeBy: sum
+		sourceColumn: OccupancyChangePts
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ADRChangePct
+		dataType: double
+		lineageTag: 6241d555-2fc3-4f7a-a7fb-711c4b1fddec
+		summarizeBy: sum
+		sourceColumn: ADRChangePct
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column AddedRoomsOccupancy
+		dataType: double
+		lineageTag: d236a0ba-0e61-4bc1-8576-93b4cfacc2f0
+		summarizeBy: sum
+		sourceColumn: AddedRoomsOccupancy
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column FoodBeverageRevenueChangePct
+		dataType: double
+		lineageTag: 3f284ecf-9b55-4744-b3a4-2269219e0923
+		summarizeBy: sum
+		sourceColumn: FoodBeverageRevenueChangePct
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column OtherRevenueChangePct
+		dataType: double
+		lineageTag: 86ce446a-f671-4786-ae4c-7948c5c0a18f
+		summarizeBy: sum
+		sourceColumn: OtherRevenueChangePct
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column OperatingExpenseChangePct
+		dataType: double
+		lineageTag: 16ba9d26-8bdb-489b-ba47-f2751f97e3ca
+		summarizeBy: sum
+		sourceColumn: OperatingExpenseChangePct
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column DistributionCostChangePts
+		dataType: double
+		lineageTag: 3366fd3c-b756-4a26-96f9-2e1ceadd7cd3
+		summarizeBy: sum
+		sourceColumn: DistributionCostChangePts
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column SatisfactionChangePts
+		dataType: double
+		lineageTag: 96f3a9bc-43ee-48c3-a7ca-be5cea47cbec
+		summarizeBy: sum
+		sourceColumn: SatisfactionChangePts
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column NewPropertyOccupancy
+		dataType: double
+		lineageTag: c4813a11-e89c-4bf2-adcb-9294d1e25230
+		summarizeBy: sum
+		sourceColumn: NewPropertyOccupancy
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column NewPropertyADR
+		dataType: double
+		lineageTag: 93903a0d-995c-43de-bc61-78e5016e31a4
+		summarizeBy: sum
+		sourceColumn: NewPropertyADR
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column AnnualRevenueImpactUSD
+		dataType: int64
+		formatString: 0
+		lineageTag: cf013e3b-93c3-42b9-b0f9-b424cad5d2ce
+		summarizeBy: sum
+		sourceColumn: AnnualRevenueImpactUSD
+
+		annotation SummarizationSetBy = Automatic
+
+	column AnnualOperatingProfitImpactUSD
+		dataType: int64
+		formatString: 0
+		lineageTag: 243b3669-2013-488f-be1f-98f3c454e941
+		summarizeBy: sum
+		sourceColumn: AnnualOperatingProfitImpactUSD
+
+		annotation SummarizationSetBy = Automatic
+
+	partition InvestmentScenarios = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("E:\powerbi-dataviz-worldchamps-2027\data\PillowKey_Dataset.xlsx"), null, true),
+				    InvestmentScenarios_Sheet = Source{[Item="InvestmentScenarios",Kind="Sheet"]}[Data],
+				    #"Promoted Headers" = Table.PromoteHeaders(InvestmentScenarios_Sheet, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"ProjectID", type text}, {"Scenario", type text}, {"OccupancyChangePts", type number}, {"ADRChangePct", type number}, {"AddedRoomsOccupancy", type number}, {"FoodBeverageRevenueChangePct", type number}, {"OtherRevenueChangePct", type number}, {"OperatingExpenseChangePct", type number}, {"DistributionCostChangePts", type number}, {"SatisfactionChangePts", type number}, {"NewPropertyOccupancy", type number}, {"NewPropertyADR", type number}, {"AnnualRevenueImpactUSD", Int64.Type}, {"AnnualOperatingProfitImpactUSD", Int64.Type}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

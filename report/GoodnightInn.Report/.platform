@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "GoodnightInn"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "fe4442df-1f3f-4a78-8846-2390e295ab7d"
+  }
+}

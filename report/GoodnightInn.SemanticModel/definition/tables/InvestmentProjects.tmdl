@@ -1,0 +1,143 @@
+table InvestmentProjects
+	lineageTag: 600dbc06-9a10-4422-bf2d-e04db73121e8
+
+	column ProjectID
+		dataType: string
+		lineageTag: 2f970fda-0fef-495e-b3e6-d330c75decf5
+		summarizeBy: none
+		sourceColumn: ProjectID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Brand
+		dataType: string
+		lineageTag: cb0f4e1b-53af-4cde-9da4-ea75d545e202
+		summarizeBy: none
+		sourceColumn: Brand
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProjectName
+		dataType: string
+		lineageTag: 64354ffb-fd29-4f79-b911-943ff64387dc
+		summarizeBy: none
+		sourceColumn: ProjectName
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category
+		dataType: string
+		lineageTag: 6cf3897a-a835-41e9-bbcb-19965e1a9006
+		summarizeBy: none
+		sourceColumn: Category
+
+		annotation SummarizationSetBy = Automatic
+
+	column Scope
+		dataType: string
+		lineageTag: 1870ed72-29ea-4384-bdd6-1e50f03df07d
+		summarizeBy: none
+		sourceColumn: Scope
+
+		annotation SummarizationSetBy = Automatic
+
+	column GrowthInitiative
+		dataType: string
+		lineageTag: 7de26942-f318-48ee-b41c-984ccadfef2c
+		summarizeBy: none
+		sourceColumn: GrowthInitiative
+
+		annotation SummarizationSetBy = Automatic
+
+	column CapexUSD
+		dataType: int64
+		formatString: 0
+		lineageTag: 3e47c4dd-4997-4a0b-9c77-9856d9ab0de4
+		summarizeBy: sum
+		sourceColumn: CapexUSD
+
+		annotation SummarizationSetBy = Automatic
+
+	column EarliestStart
+		dataType: int64
+		formatString: 0
+		lineageTag: 0715a313-d251-4725-8c5c-008df5c6e212
+		summarizeBy: sum
+		sourceColumn: EarliestStart
+
+		annotation SummarizationSetBy = Automatic
+
+	column DurationMonths
+		dataType: int64
+		formatString: 0
+		lineageTag: e5fdbeea-f97a-495b-84ff-9a998bcf972a
+		summarizeBy: sum
+		sourceColumn: DurationMonths
+
+		annotation SummarizationSetBy = Automatic
+
+	column RoomsOutOfServicePct
+		dataType: double
+		lineageTag: 8e5c2ac2-bfe1-4fda-8d4d-d490edb3a19c
+		summarizeBy: sum
+		sourceColumn: RoomsOutOfServicePct
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column AddedRooms
+		dataType: int64
+		formatString: 0
+		lineageTag: abf14102-7750-4d0f-b3a0-a1fee562b04d
+		summarizeBy: sum
+		sourceColumn: AddedRooms
+
+		annotation SummarizationSetBy = Automatic
+
+	column AnnualRunningCostUSD
+		dataType: int64
+		formatString: 0
+		lineageTag: 1a64d255-d00b-4161-91fa-a1625aef31d5
+		summarizeBy: sum
+		sourceColumn: AnnualRunningCostUSD
+
+		annotation SummarizationSetBy = Automatic
+
+	column DependsOn
+		dataType: string
+		lineageTag: 98d9bc20-acd3-4c6e-86f9-a275289d3233
+		summarizeBy: none
+		sourceColumn: DependsOn
+
+		annotation SummarizationSetBy = Automatic
+
+	column ExclusiveWith
+		dataType: string
+		lineageTag: d9a4dc07-674a-4bd2-b7c0-cb72da978a49
+		summarizeBy: none
+		sourceColumn: ExclusiveWith
+
+		annotation SummarizationSetBy = Automatic
+
+	column Description
+		dataType: string
+		lineageTag: 9f93b60c-e875-4923-a619-dc7821139a9a
+		summarizeBy: none
+		sourceColumn: Description
+
+		annotation SummarizationSetBy = Automatic
+
+	partition InvestmentProjects = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("E:\powerbi-dataviz-worldchamps-2027\data\PillowKey_Dataset.xlsx"), null, true),
+				    InvestmentProjects_Sheet = Source{[Item="InvestmentProjects",Kind="Sheet"]}[Data],
+				    #"Promoted Headers" = Table.PromoteHeaders(InvestmentProjects_Sheet, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"ProjectID", type text}, {"Brand", type text}, {"ProjectName", type text}, {"Category", type text}, {"Scope", type text}, {"GrowthInitiative", type text}, {"CapexUSD", Int64.Type}, {"EarliestStart", Int64.Type}, {"DurationMonths", Int64.Type}, {"RoomsOutOfServicePct", type number}, {"AddedRooms", Int64.Type}, {"AnnualRunningCostUSD", Int64.Type}, {"DependsOn", type text}, {"ExclusiveWith", type text}, {"Description", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+

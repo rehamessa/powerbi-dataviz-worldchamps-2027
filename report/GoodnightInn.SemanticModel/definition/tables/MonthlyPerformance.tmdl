@@ -1,0 +1,141 @@
+table MonthlyPerformance
+	lineageTag: e640c42f-42c6-4285-b1a4-ce1e8932cb3a
+
+	column HotelID
+		dataType: string
+		lineageTag: d06c4643-cd15-4627-b026-0da9276d1d94
+		summarizeBy: none
+		sourceColumn: HotelID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Month
+		dataType: int64
+		formatString: 0
+		lineageTag: 1d91b361-5ad3-4c0f-9705-46a4b6ba830c
+		summarizeBy: sum
+		sourceColumn: Month
+
+		annotation SummarizationSetBy = Automatic
+
+	column RoomsAvailable
+		dataType: int64
+		formatString: 0
+		lineageTag: 42e353bb-bce8-46e4-b37b-9387d73145eb
+		summarizeBy: sum
+		sourceColumn: RoomsAvailable
+
+		annotation SummarizationSetBy = Automatic
+
+	column RoomsSold
+		dataType: int64
+		formatString: 0
+		lineageTag: f6c769ba-117a-4c24-bf6b-0bf42b00f321
+		summarizeBy: sum
+		sourceColumn: RoomsSold
+
+		annotation SummarizationSetBy = Automatic
+
+	column RoomRevenue
+		dataType: int64
+		formatString: 0
+		lineageTag: 25db0b72-9d8b-4853-af22-c9b41531f6ae
+		summarizeBy: sum
+		sourceColumn: RoomRevenue
+
+		annotation SummarizationSetBy = Automatic
+
+	column FoodBeverageRevenue
+		dataType: int64
+		formatString: 0
+		lineageTag: a0cbfddb-acba-4c00-ac89-230d13a76313
+		summarizeBy: sum
+		sourceColumn: FoodBeverageRevenue
+
+		annotation SummarizationSetBy = Automatic
+
+	column OtherRevenue
+		dataType: int64
+		formatString: 0
+		lineageTag: d080ce60-9f04-4110-ad5f-3fd430ecf801
+		summarizeBy: sum
+		sourceColumn: OtherRevenue
+
+		annotation SummarizationSetBy = Automatic
+
+	column TotalRevenue
+		dataType: int64
+		formatString: 0
+		lineageTag: 485bea8c-86e0-4d05-8a0d-f33a85e0fe35
+		summarizeBy: sum
+		sourceColumn: TotalRevenue
+
+		annotation SummarizationSetBy = Automatic
+
+	column StaffCost
+		dataType: int64
+		formatString: 0
+		lineageTag: 71e6e03b-215f-4d44-ab47-d4a6112fffa2
+		summarizeBy: sum
+		sourceColumn: StaffCost
+
+		annotation SummarizationSetBy = Automatic
+
+	column EnergyCost
+		dataType: int64
+		formatString: 0
+		lineageTag: 6a5f3b95-fe28-4905-a722-34d670725ea2
+		summarizeBy: sum
+		sourceColumn: EnergyCost
+
+		annotation SummarizationSetBy = Automatic
+
+	column MaintenanceCost
+		dataType: int64
+		formatString: 0
+		lineageTag: a6117b9f-2ffd-418e-a209-6f4dc80e4255
+		summarizeBy: sum
+		sourceColumn: MaintenanceCost
+
+		annotation SummarizationSetBy = Automatic
+
+	column FoodBeverageCost
+		dataType: int64
+		formatString: 0
+		lineageTag: 4df2fdd3-4cff-4e37-9a47-4951be9f4cde
+		summarizeBy: sum
+		sourceColumn: FoodBeverageCost
+
+		annotation SummarizationSetBy = Automatic
+
+	column OtherOperatingCost
+		dataType: int64
+		formatString: 0
+		lineageTag: f41129f8-3c0d-4d0b-a2e2-09175e7adaf1
+		summarizeBy: sum
+		sourceColumn: OtherOperatingCost
+
+		annotation SummarizationSetBy = Automatic
+
+	column TotalOperatingExpenses
+		dataType: int64
+		formatString: 0
+		lineageTag: 14d42a5c-08c8-4940-a058-5b3e1b14388b
+		summarizeBy: sum
+		sourceColumn: TotalOperatingExpenses
+
+		annotation SummarizationSetBy = Automatic
+
+	partition MonthlyPerformance = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("E:\powerbi-dataviz-worldchamps-2027\data\PillowKey_Dataset.xlsx"), null, true),
+				    MonthlyPerformance_Sheet = Source{[Item="MonthlyPerformance",Kind="Sheet"]}[Data],
+				    #"Promoted Headers" = Table.PromoteHeaders(MonthlyPerformance_Sheet, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"HotelID", type text}, {"Month", Int64.Type}, {"RoomsAvailable", Int64.Type}, {"RoomsSold", Int64.Type}, {"RoomRevenue", Int64.Type}, {"FoodBeverageRevenue", Int64.Type}, {"OtherRevenue", Int64.Type}, {"TotalRevenue", Int64.Type}, {"StaffCost", Int64.Type}, {"EnergyCost", Int64.Type}, {"MaintenanceCost", Int64.Type}, {"FoodBeverageCost", Int64.Type}, {"OtherOperatingCost", Int64.Type}, {"TotalOperatingExpenses", Int64.Type}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_ResultType = Table
+
