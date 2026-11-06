@@ -38,3 +38,55 @@ relationship AutoDetected_445e5e51-b9bb-4711-ac82-820dade964e4
 	fromColumn: InvestmentScenarios.Scenario
 	toColumn: Scenario.Scenario
 
+relationship AutoDetected_f8bf7ed3-c0ff-49c9-8790-b4086f4aebf7
+	fromColumn: FinanceAssumptions.Region
+	toColumn: Region.Region
+
+relationship AutoDetected_b174bd7c-4ccd-4e9b-a6dd-a34ff2d35f55
+	fromColumn: Hotels.Region
+	toColumn: Region.Region
+
+relationship AutoDetected_4e7ae470-b5b1-4520-831d-12910fa2f663
+	fromColumn: InvestmentProjectProperties.ProjectID
+	toColumn: InvestmentProjects.ProjectID
+
+relationship 72c319b9-c6ef-4123-8c9b-f0b1034a6cbf
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Hotels.OpeningDate
+	toColumn: LocalDateTable_10d5a9b1-fa5b-464c-847e-b0ad5dc9f464.Date
+
+relationship 58079a35-60b7-4440-9fe9-e39966f0c38d
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Hotels.LastRenovationDate
+	toColumn: LocalDateTable_5770bda2-a663-47dc-9e81-663e52e7acc8.Date
+
+relationship 55f5622c-adf1-41fe-8d2d-30c9129495e6
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Renovations.StartDate
+	toColumn: LocalDateTable_737d898f-9b65-4f54-9d13-3f910498ef9f.Date
+
+relationship c3003ec6-0b76-4f3e-b53f-7e483e02ed63
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Renovations.EndDate
+	toColumn: LocalDateTable_d62f8360-9bce-4d2e-82dc-1e9d51aa96bf.Date
+
+relationship 135526b5-4971-8a67-fd0b-8925abea8950
+	fromColumn: MonthlyPerformance.Month
+	toColumn: Date.Date
+
+relationship a20a1c57-f661-fb33-9b9f-fc126b5142c3
+	fromColumn: GuestExperience.Month
+	toColumn: Date.Date
+
+relationship d308b37e-a534-951f-5b5b-eb475a942d7a
+	fromColumn: BookingChannels.Month
+	toColumn: Date.Date
+
+relationship 6b833354-6089-359b-5a7e-39f28ddd8627
+	fromColumn: GuestComplaints.Month
+	toColumn: Date.Date
+
+relationship 37a4e0ad-f614-d578-6154-5f93a13c6021
+	fromColumn: GuestSegments.Month
+	toColumn: Date.Date
+

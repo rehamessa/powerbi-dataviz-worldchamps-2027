@@ -11,29 +11,46 @@ table Renovations
 
 	column HotelID
 		dataType: string
+		isHidden
 		lineageTag: ecffdff6-9e51-4db6-8d1b-f97c41b39f83
 		summarizeBy: none
 		sourceColumn: HotelID
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 	column StartDate
-		dataType: int64
-		formatString: 0
+		dataType: dateTime
+		formatString: Long Date
 		lineageTag: c409fae3-4da4-46e2-972a-fee2607401b0
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: StartDate
 
+		variation Variation
+			isDefault
+			relationship: 55f5622c-adf1-41fe-8d2d-30c9129495e6
+			defaultHierarchy: LocalDateTable_737d898f-9b65-4f54-9d13-3f910498ef9f.'Date Hierarchy'
+
 		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
 
 	column EndDate
-		dataType: int64
-		formatString: 0
+		dataType: dateTime
+		formatString: Long Date
 		lineageTag: 45fba932-d72a-44af-97ef-0e4fad3fa1fa
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: EndDate
 
+		variation Variation
+			isDefault
+			relationship: c3003ec6-0b76-4f3e-b53f-7e483e02ed63
+			defaultHierarchy: LocalDateTable_d62f8360-9bce-4d2e-82dc-1e9d51aa96bf.'Date Hierarchy'
+
 		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
 
 	column RenovationType
 		dataType: string
@@ -69,9 +86,11 @@ table Renovations
 				    Source = Excel.Workbook(File.Contents("E:\powerbi-dataviz-worldchamps-2027\data\PillowKey_Dataset.xlsx"), null, true),
 				    Renovations_Sheet = Source{[Item="Renovations",Kind="Sheet"]}[Data],
 				    #"Promoted Headers" = Table.PromoteHeaders(Renovations_Sheet, [PromoteAllScalars=true]),
-				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"RenovationID", type text}, {"HotelID", type text}, {"StartDate", Int64.Type}, {"EndDate", Int64.Type}, {"RenovationType", type text}, {"RoomsOutOfServicePct", type number}, {"CostUSD", Int64.Type}})
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"RenovationID", type text}, {"HotelID", type text}, {"StartDate", type date}, {"EndDate", type date}, {"RenovationType", type text}, {"RoomsOutOfServicePct", type number}, {"CostUSD", Int64.Type}})
 				in
 				    #"Changed Type"
 
 	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
 

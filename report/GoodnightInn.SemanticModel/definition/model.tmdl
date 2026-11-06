@@ -9,13 +9,12 @@ model Model
 
 annotation __PBI_TimeIntelligenceEnabled = 1
 
-annotation PBI_QueryOrder = ["BookingChannels","Brands","Contents","FinanceAssumptions","FinanceParameters","GuestComplaints","GuestExperience","Hotels","GuestSegments","InvestmentProjectProperties","InvestmentProjects","InvestmentScenarios","MonthlyPerformance","Region","Renovations","Scenario"]
+annotation PBI_QueryOrder = ["BookingChannels","Brands","FinanceAssumptions","FinanceParameters","GuestComplaints","GuestExperience","Hotels","GuestSegments","InvestmentProjectProperties","InvestmentProjects","InvestmentScenarios","MonthlyPerformance","Region","Renovations","Scenario","Date"]
 
 annotation PBI_ProTooling = ["DevMode"]
 
 ref table BookingChannels
 ref table Brands
-ref table Contents
 ref table FinanceAssumptions
 ref table FinanceParameters
 ref table GuestComplaints
@@ -29,6 +28,12 @@ ref table MonthlyPerformance
 ref table Region
 ref table Renovations
 ref table Scenario
+ref table Date
+ref table DateTableTemplate_603ede37-df61-44e5-a75a-532fef0d82a3
+ref table LocalDateTable_10d5a9b1-fa5b-464c-847e-b0ad5dc9f464
+ref table LocalDateTable_5770bda2-a663-47dc-9e81-663e52e7acc8
+ref table LocalDateTable_737d898f-9b65-4f54-9d13-3f910498ef9f
+ref table LocalDateTable_d62f8360-9bce-4d2e-82dc-1e9d51aa96bf
 
 ref cultureInfo en-US
 

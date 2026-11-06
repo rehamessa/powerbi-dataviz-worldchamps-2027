@@ -1,0 +1,230 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 0,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 881.06135147584394,
+            "y": -50
+          },
+          "nodeIndex": "BookingChannels",
+          "nodeLineageTag": "5e656ba5-39de-4034-9bbe-d3375dd254c6",
+          "size": {
+            "height": 248,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1268.9110111081882,
+            "y": 815.5432309797161
+          },
+          "nodeIndex": "Brands",
+          "nodeLineageTag": "e276c9d0-15dc-4423-9307-90734a8c0c16",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1929.1348964509443,
+            "y": 578.504548976463
+          },
+          "nodeIndex": "FinanceAssumptions",
+          "nodeLineageTag": "4cfc7794-d2c2-4ca2-ba61-0a7f54176707",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2171.671481816798,
+            "y": 800.26064653743856
+          },
+          "nodeIndex": "FinanceParameters",
+          "nodeLineageTag": "424fae70-7f2b-46e1-81ba-acc0c92cd663",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1024.6706427460124,
+            "y": 1131.0090979529259
+          },
+          "nodeIndex": "GuestComplaints",
+          "nodeLineageTag": "c658f36f-5241-4025-a3aa-871a4f33fb0d",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 626.98966276977569,
+            "y": 940.219502077259
+          },
+          "nodeIndex": "GuestExperience",
+          "nodeLineageTag": "82247b6f-1bb7-47b1-b260-3387643b71e5",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 300.16131996977913,
+            "y": 387.02904872583122
+          },
+          "nodeIndex": "GuestSegments",
+          "nodeLineageTag": "ad064fe1-0c48-464c-977e-410857bd7206",
+          "size": {
+            "height": 224,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 826.97289134202822,
+            "y": 579.37147370251648
+          },
+          "nodeIndex": "Hotels",
+          "nodeLineageTag": "5853f463-8f9d-4330-a344-93a4b5ab4648",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1738.5983110850905,
+            "y": 1036.4557684886581
+          },
+          "nodeIndex": "InvestmentProjectProperties",
+          "nodeLineageTag": "c8329887-83f6-4b8f-b16b-19f3f364afe3",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1409.0763786757141,
+            "y": 461.57547775483965
+          },
+          "nodeIndex": "InvestmentProjects",
+          "nodeLineageTag": "600dbc06-9a10-4422-bf2d-e04db73121e8",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1119.3808442358472,
+            "y": 249.81544559231202
+          },
+          "nodeIndex": "InvestmentScenarios",
+          "nodeLineageTag": "99356aa7-26cc-4286-acf6-13682f21a76b",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 50,
+            "y": 668.18590845948108
+          },
+          "nodeIndex": "MonthlyPerformance",
+          "nodeLineageTag": "e640c42f-42c6-4285-b1a4-ce1e8932cb3a",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1840.1592792515348,
+            "y": 850.894792878902
+          },
+          "nodeIndex": "Region",
+          "nodeLineageTag": "0acb5376-9077-420d-990d-90f6e0dbcb39",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 592.91776083144441,
+            "y": 128.83242384746632
+          },
+          "nodeIndex": "Renovations",
+          "nodeLineageTag": "49e4fbf2-828d-4707-8ede-9f335c280af7",
+          "size": {
+            "height": 248,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 1411.1348964509443,
+            "y": 278.94003197544532
+          },
+          "nodeIndex": "Scenario",
+          "nodeLineageTag": "610c885a-a763-4277-a85f-5f014e6d9501",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 2447.1348964509443,
+            "y": 554.504548976463
+          },
+          "nodeIndex": "Date",
+          "nodeLineageTag": "03664af2-607a-48d1-a264-d238880aa115",
+          "size": {
+            "height": 248,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 41,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}

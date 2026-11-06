@@ -3,20 +3,28 @@ table GuestSegments
 
 	column HotelID
 		dataType: string
+		isHidden
 		lineageTag: 1cbf9a8b-1070-4a97-922d-287caf9a1eef
 		summarizeBy: none
 		sourceColumn: HotelID
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
 
 	column Month
-		dataType: int64
-		formatString: 0
+		dataType: dateTime
+		isHidden
+		formatString: Long Date
 		lineageTag: 40af3b3c-89b8-42db-b3ce-0e0ab446ad68
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: Month
 
+		changedProperty = IsHidden
+
 		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
 
 	column Segment
 		dataType: string
@@ -60,9 +68,11 @@ table GuestSegments
 				    Source = Excel.Workbook(File.Contents("E:\powerbi-dataviz-worldchamps-2027\data\PillowKey_Dataset.xlsx"), null, true),
 				    GuestSegments_Sheet = Source{[Item="GuestSegments",Kind="Sheet"]}[Data],
 				    #"Promoted Headers" = Table.PromoteHeaders(GuestSegments_Sheet, [PromoteAllScalars=true]),
-				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"HotelID", type text}, {"Month", Int64.Type}, {"Segment", type text}, {"Bookings", Int64.Type}, {"RoomNights", Int64.Type}, {"RoomRevenue", Int64.Type}})
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"HotelID", type text}, {"Month", type date}, {"Segment", type text}, {"Bookings", Int64.Type}, {"RoomNights", Int64.Type}, {"RoomRevenue", Int64.Type}})
 				in
 				    #"Changed Type"
 
 	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
 
