@@ -1,0 +1,388 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "4c45247fc562a5d39100",
+  "position": {
+    "x": 10.857965702317058,
+    "y": 0,
+    "z": 0,
+    "height": 919.30776279617749,
+    "width": 1816.8995941877208,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "ADR"
+                }
+              },
+              "queryRef": "_Measures.ADR",
+              "nativeQueryRef": "ADR"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Occupancy %"
+                }
+              },
+              "queryRef": "_Measures.Occupancy %",
+              "nativeQueryRef": "Occupancy %"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Operating Expenses"
+                }
+              },
+              "queryRef": "_Measures.Operating Expenses",
+              "nativeQueryRef": "Operating Expenses"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "RevPAR"
+                }
+              },
+              "queryRef": "_Measures.RevPAR",
+              "nativeQueryRef": "RevPAR"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Room Revenue"
+                }
+              },
+              "queryRef": "_Measures.Room Revenue",
+              "nativeQueryRef": "Room Revenue"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Rooms Available"
+                }
+              },
+              "queryRef": "_Measures.Rooms Available",
+              "nativeQueryRef": "Rooms Available"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Rooms Sold"
+                }
+              },
+              "queryRef": "_Measures.Rooms Sold",
+              "nativeQueryRef": "Rooms Sold"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Total Revenue"
+                }
+              },
+              "queryRef": "_Measures.Total Revenue",
+              "nativeQueryRef": "Total Revenue"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Distribution Cost"
+                }
+              },
+              "queryRef": "_Measures.Distribution Cost",
+              "nativeQueryRef": "Distribution Cost"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "GOP"
+                }
+              },
+              "queryRef": "_Measures.GOP",
+              "nativeQueryRef": "GOP"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "GOP Margin %"
+                }
+              },
+              "queryRef": "_Measures.GOP Margin %",
+              "nativeQueryRef": "GOP Margin %"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Margin After Distribution %"
+                }
+              },
+              "queryRef": "_Measures.Margin After Distribution %",
+              "nativeQueryRef": "Margin After Distribution %"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Profit After Distribution"
+                }
+              },
+              "queryRef": "_Measures.Profit After Distribution",
+              "nativeQueryRef": "Profit After Distribution"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Channel Room Revenue"
+                }
+              },
+              "queryRef": "_Measures.Channel Room Revenue",
+              "nativeQueryRef": "Channel Room Revenue"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Distribution Cost %"
+                }
+              },
+              "queryRef": "_Measures.Distribution Cost %",
+              "nativeQueryRef": "Distribution Cost %"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "OTA Share %"
+                }
+              },
+              "queryRef": "_Measures.OTA Share %",
+              "nativeQueryRef": "OTA Share %"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Direct Share %"
+                }
+              },
+              "queryRef": "_Measures.Direct Share %",
+              "nativeQueryRef": "Direct Share %"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Channel Mix %"
+                }
+              },
+              "queryRef": "_Measures.Channel Mix %",
+              "nativeQueryRef": "Channel Mix %"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Survey Responses"
+                }
+              },
+              "queryRef": "_Measures.Survey Responses",
+              "nativeQueryRef": "Survey Responses"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "NPS"
+                }
+              },
+              "queryRef": "_Measures.NPS",
+              "nativeQueryRef": "NPS"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Overall Score"
+                }
+              },
+              "queryRef": "_Measures.Overall Score",
+              "nativeQueryRef": "Overall Score"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Complaints"
+                }
+              },
+              "queryRef": "_Measures.Complaints",
+              "nativeQueryRef": "Complaints"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Complaints per 1k Room Nights"
+                }
+              },
+              "queryRef": "_Measures.Complaints per 1k Room Nights",
+              "nativeQueryRef": "Complaints per 1k Room Nights"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "ADR YoY %"
+                }
+              },
+              "queryRef": "_Measures.ADR YoY %",
+              "nativeQueryRef": "ADR YoY %"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "NPS Change vs 2021"
+                }
+              },
+              "queryRef": "_Measures.NPS Change vs 2021",
+              "nativeQueryRef": "NPS Change vs 2021"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Room Comfort Score"
+                }
+              },
+              "queryRef": "_Measures.Room Comfort Score",
+              "nativeQueryRef": "Room Comfort Score"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

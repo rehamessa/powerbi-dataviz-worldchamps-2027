@@ -1,0 +1,174 @@
+table _Measures
+	lineageTag: a18cd67f-6502-4b17-b786-b118f2312192
+
+	measure 'Rooms Sold' = SUM ( MonthlyPerformance[RoomsSold] )
+		formatString: 0
+		lineageTag: 8afaf03f-a114-4816-98ec-88530bb57734
+
+	measure 'Rooms Available' = SUM ( MonthlyPerformance[RoomsAvailable] )
+		formatString: 0
+		lineageTag: 549aac3b-0e1d-4036-bc26-e164bc6a7770
+
+	measure 'Room Revenue' = SUM ( MonthlyPerformance[RoomRevenue] )
+		formatString: 0
+		lineageTag: 986a7527-0b9c-4e0a-9f05-8ccd06b33387
+
+	measure 'Total Revenue' = SUM ( MonthlyPerformance[TotalRevenue] )
+		formatString: 0
+		lineageTag: 8c6e3dfc-c2c9-4439-b2bb-3bcfe4e52039
+
+	measure 'Operating Expenses' = SUM ( MonthlyPerformance[TotalOperatingExpenses] )
+		formatString: 0
+		lineageTag: 39ccbe37-012d-4a6c-bd36-d6721d4e12a1
+
+	measure 'Occupancy %' = DIVIDE ( [Rooms Sold], [Rooms Available] )
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: b333c821-53fd-4858-9177-626dea300c20
+
+	measure ADR = DIVIDE ( [Room Revenue], [Rooms Sold] )
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 8db7947f-2eea-4c08-94d5-f875d6e194fe
+
+	measure RevPAR = DIVIDE ( [Room Revenue], [Rooms Available] )
+		lineageTag: 696a1ba9-f1be-4ba6-ba4f-dbe37be90074
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure GOP = [Total Revenue] - [Operating Expenses]
+		formatString: 0
+		lineageTag: e2a3e20a-d373-4301-99d1-b542baca4068
+
+	measure 'GOP Margin %' = DIVIDE ( [GOP], [Total Revenue] )
+		lineageTag: d3709cbf-bb2a-4f21-8154-43015b23eefd
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Distribution Cost' = SUM ( BookingChannels[DistributionCost] )
+		formatString: 0
+		lineageTag: fe3c9cab-be32-4220-9c6c-975f3f93b4ab
+
+	measure 'Profit After Distribution' = [GOP] - [Distribution Cost]
+		formatString: 0
+		lineageTag: 85686cf0-07e2-4c08-a62f-0b7561f1b75b
+
+	measure 'Margin After Distribution %' = DIVIDE ( [Profit After Distribution], [Total Revenue] )
+		lineageTag: 35e12842-c95b-4824-8663-890e0d8c70b2
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Channel Room Revenue' = SUM ( BookingChannels[RoomRevenue] )
+		formatString: 0
+		lineageTag: 9f9b56fb-f1b4-4047-96c0-36d45e592c80
+
+	measure 'Distribution Cost %' = DIVIDE ( [Distribution Cost], [Channel Room Revenue] )
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 4a89e2ea-d085-4bcf-aa1e-3975e4ab6335
+
+	measure 'OTA Share %' =
+			
+			DIVIDE (
+			    CALCULATE ( [Channel Room Revenue], BookingChannels[Channel] = "Online Travel Agencies" ),
+			    CALCULATE ( [Channel Room Revenue], REMOVEFILTERS ( BookingChannels[Channel] ) )
+			)
+		lineageTag: 991934e2-1c57-43f2-b058-4f616b4412f3
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Direct Share %' =
+			
+			DIVIDE (
+			    CALCULATE (
+			        [Channel Room Revenue],
+			        BookingChannels[Channel] IN { "Direct Website & App", "Direct Phone & Walk-in" }
+			    ),
+			    CALCULATE ( [Channel Room Revenue], REMOVEFILTERS ( BookingChannels[Channel] ) )
+			)
+		lineageTag: f386cd8a-bfcd-4537-9218-dd2515d2f4f4
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Channel Mix %' =
+			
+			DIVIDE (
+			    [Channel Room Revenue],
+			    CALCULATE ( [Channel Room Revenue], REMOVEFILTERS ( BookingChannels[Channel] ) )
+			)
+		lineageTag: f2a82338-7e81-4db8-844c-a15ddb26c1a1
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Survey Responses' = SUM ( GuestExperience[SurveyResponses] )
+		formatString: 0
+		lineageTag: cf1fa567-eb81-4cfb-a66c-da8281e9bd26
+
+	measure NPS =
+			
+			DIVIDE (
+			    SUMX ( GuestExperience, GuestExperience[NetPromoterScore] * GuestExperience[SurveyResponses] ),
+			    [Survey Responses]
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 44c6638b-3c15-48dd-9d4a-2f12f7a22de1
+
+	measure 'Overall Score' =
+			
+			DIVIDE (
+			    SUMX ( GuestExperience, GuestExperience[OverallScore] * GuestExperience[SurveyResponses] ),
+			    [Survey Responses]
+			)
+		lineageTag: 02fc8c17-dd91-4e20-b0fc-d70509b5ab44
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Room Comfort Score' =
+			
+			DIVIDE (
+			    SUMX ( GuestExperience, GuestExperience[RoomComfortScore] * GuestExperience[SurveyResponses] ),
+			    [Survey Responses]
+			)
+		lineageTag: 6a7a0049-c9c9-4551-8bc3-9397a9f93b48
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Complaints = SUM ( GuestComplaints[Complaints] )
+		formatString: 0
+		lineageTag: 36f41243-1a1e-4982-9d6b-80f89e1a7726
+
+	measure 'Complaints per 1k Room Nights' = DIVIDE ( [Complaints], [Rooms Sold] ) * 1000
+		lineageTag: a23699b7-36a3-4c10-badc-755d39d7af20
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'ADR YoY %' =
+			
+			VAR _cy = [ADR]
+			VAR _py = CALCULATE ( [ADR], DATEADD ( 'Date'[Date], -1, YEAR ) )
+			RETURN DIVIDE ( _cy - _py, _py )
+		lineageTag: d38bcf68-17ff-4b82-aab1-e4853a139b78
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'NPS Change vs 2021' =
+			
+			[NPS] - CALCULATE ( [NPS], REMOVEFILTERS ( 'Date' ), 'Date'[Year] = 2021 )
+		lineageTag: 77428bc1-0b56-4f39-a684-bfecb080d26d
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Column
+		formatString: 0
+		lineageTag: 0535f51a-b77f-4758-b6d4-8241dd73f7b5
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Column]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition _Measures = calculated
+		mode: import
+		source = Row("Column", BLANK())
+
+	annotation PBI_Id = 25d57c8c6add494d8c0d3e55f7d9919a
+
+	annotation 436ba87b-9c83-4389-a31b-ebd06a36be98 = {"Expression":""}
+
