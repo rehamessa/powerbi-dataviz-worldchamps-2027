@@ -1,0 +1,9 @@
+# Contest dataset (Microsoft-provided) - not redistributed
+data/*.xlsx
+
+# Power BI Project local/cache files
+**/.pbi/localSettings.json
+**/.pbi/cache.abf
+
+# Binary report files (we track the .pbip project instead)
+*.pbix
