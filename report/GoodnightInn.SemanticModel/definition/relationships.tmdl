@@ -90,3 +90,8 @@ relationship 37a4e0ad-f614-d578-6154-5f93a13c6021
 	fromColumn: GuestSegments.Month
 	toColumn: Date.Date
 
+relationship 93e032f0-3af4-4b9a-83fe-640fb81482df
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Hotels.ProductDate
+	toColumn: LocalDateTable_a7628e39-8c2b-4eed-a132-dcf792ac0b87.Date
+

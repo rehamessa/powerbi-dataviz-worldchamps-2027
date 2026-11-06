@@ -118,6 +118,62 @@ table Hotels
 
 		annotation UnderlyingDateTimeDataType = Date
 
+	column ProductDate = COALESCE ( Hotels[LastRenovationDate], Hotels[OpeningDate] )
+		formatString: Long Date
+		lineageTag: b9badb80-9843-43ca-9a5b-ad905708a61f
+		summarizeBy: none
+
+		variation Variation
+			isDefault
+			relationship: 93e032f0-3af4-4b9a-83fe-640fb81482df
+			defaultHierarchy: LocalDateTable_a7628e39-8c2b-4eed-a132-dcf792ac0b87.'Date Hierarchy'
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column YearsSinceRefresh =
+			
+			DATEDIFF ( Hotels[ProductDate], DATE ( 2025, 12, 31 ), MONTH ) / 12
+		lineageTag: e95168e0-3edc-4035-a099-b7abf1b01b66
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column RefreshBand =
+			
+			SWITCH (
+			    TRUE (),
+			    Hotels[YearsSinceRefresh] <= 5,  "0–5 yrs",
+			    Hotels[YearsSinceRefresh] <= 10, "5–10 yrs",
+			    "10+ yrs"
+			)
+		lineageTag: a19dbd9b-a16f-46a6-b5fa-79176290f631
+		summarizeBy: none
+		sortByColumn: RefreshBandOrder
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column RefreshBandOrder =
+			
+			SWITCH (
+			    TRUE (),
+			    Hotels[YearsSinceRefresh] <= 5,  1,
+			    Hotels[YearsSinceRefresh] <= 10, 2,
+			    3
+			)
+		formatString: 0
+		lineageTag: e059cdbc-0f37-4873-8812-f3d9180c2cb1
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
 	partition Hotels = m
 		mode: import
 		source =
