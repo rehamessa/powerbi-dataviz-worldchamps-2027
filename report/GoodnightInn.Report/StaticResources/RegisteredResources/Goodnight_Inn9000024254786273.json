@@ -496,5 +496,32 @@
   "center": "#F7F3EE",
   "minimum": "#E8231D",
   "hyperlink": "#2F5A9E",
-  "visitedHyperlink": "#252547"
+  "visitedHyperlink": "#252547",
+  "textClasses": {
+    "callout": {
+      "fontSize": 26,
+      "fontFace": "Segoe UI Semibold",
+      "color": "#252547"
+    },
+    "largeTitle": {
+      "fontSize": 20,
+      "fontFace": "Segoe UI Semibold",
+      "color": "#252547"
+    },
+    "title": {
+      "fontSize": 12,
+      "fontFace": "Segoe UI Semibold",
+      "color": "#252547"
+    },
+    "header": {
+      "fontSize": 12,
+      "fontFace": "Segoe UI Semibold",
+      "color": "#252547"
+    },
+    "label": {
+      "fontSize": 10,
+      "fontFace": "Segoe UI",
+      "color": "#5B5B7A"
+    }
+  }
 }

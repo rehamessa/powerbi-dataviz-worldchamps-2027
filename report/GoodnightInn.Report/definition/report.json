@@ -11,7 +11,7 @@
       "type": "SharedResources"
     },
     "customTheme": {
-      "name": "Goodnight_Inn2519729479164713.json",
+      "name": "Goodnight_Inn9000024254786273.json",
       "reportVersionAtImport": {
         "visual": "2.14.0",
         "report": "3.4.0",
@@ -65,8 +65,8 @@
       "type": "RegisteredResources",
       "items": [
         {
-          "name": "Goodnight_Inn2519729479164713.json",
-          "path": "Goodnight_Inn2519729479164713.json",
+          "name": "Goodnight_Inn9000024254786273.json",
+          "path": "Goodnight_Inn9000024254786273.json",
           "type": "CustomTheme"
         }
       ]

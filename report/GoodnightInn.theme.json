@@ -1,6 +1,5 @@
 {
   "name": "Goodnight Inn",
-
   "dataColors": [
     "#2F5A9E",
     "#9196BE",
@@ -11,25 +10,46 @@
     "#AAC0B3",
     "#6B70A8"
   ],
-
   "foreground": "#252547",
   "foregroundNeutralSecondary": "#5B5B7A",
   "foregroundNeutralTertiary": "#8A8AA3",
-
   "background": "#FFFFFF",
   "backgroundLight": "#F7F3EE",
   "backgroundNeutral": "#E6DCD2",
-
   "tableAccent": "#2F5A9E",
-
   "good": "#2F5A9E",
   "neutral": "#9196BE",
   "bad": "#E8231D",
-
   "maximum": "#2F5A9E",
   "center": "#F7F3EE",
   "minimum": "#E8231D",
-
   "hyperlink": "#2F5A9E",
-  "visitedHyperlink": "#252547"
+  "visitedHyperlink": "#252547",
+  "textClasses": {
+    "callout": {
+      "fontSize": 26,
+      "fontFace": "Segoe UI Semibold",
+      "color": "#252547"
+    },
+    "largeTitle": {
+      "fontSize": 20,
+      "fontFace": "Segoe UI Semibold",
+      "color": "#252547"
+    },
+    "title": {
+      "fontSize": 12,
+      "fontFace": "Segoe UI Semibold",
+      "color": "#252547"
+    },
+    "header": {
+      "fontSize": 12,
+      "fontFace": "Segoe UI Semibold",
+      "color": "#252547"
+    },
+    "label": {
+      "fontSize": 10,
+      "fontFace": "Segoe UI",
+      "color": "#5B5B7A"
+    }
+  }
 }
