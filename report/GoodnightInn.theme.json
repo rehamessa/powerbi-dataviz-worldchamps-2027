@@ -1,0 +1,35 @@
+{
+  "name": "Goodnight Inn",
+
+  "dataColors": [
+    "#2F5A9E",
+    "#9196BE",
+    "#252547",
+    "#5E8C77",
+    "#E8231D",
+    "#E95F1F",
+    "#AAC0B3",
+    "#6B70A8"
+  ],
+
+  "foreground": "#252547",
+  "foregroundNeutralSecondary": "#5B5B7A",
+  "foregroundNeutralTertiary": "#8A8AA3",
+
+  "background": "#FFFFFF",
+  "backgroundLight": "#F7F3EE",
+  "backgroundNeutral": "#E6DCD2",
+
+  "tableAccent": "#2F5A9E",
+
+  "good": "#2F5A9E",
+  "neutral": "#9196BE",
+  "bad": "#E8231D",
+
+  "maximum": "#2F5A9E",
+  "center": "#F7F3EE",
+  "minimum": "#E8231D",
+
+  "hyperlink": "#2F5A9E",
+  "visitedHyperlink": "#252547"
+}
