@@ -22,11 +22,11 @@ table _Measures
 		lineageTag: 39ccbe37-012d-4a6c-bd36-d6721d4e12a1
 
 	measure 'Occupancy %' = DIVIDE ( [Rooms Sold], [Rooms Available] )
-		formatString: 0.00%;-0.00%;0.00%
+		formatString: 0.0%;-0.0%;0.0%
 		lineageTag: b333c821-53fd-4858-9177-626dea300c20
 
 	measure ADR = DIVIDE ( [Room Revenue], [Rooms Sold] )
-		formatString: 0.00%;-0.00%;0.00%
+		formatString: \$#,0.00;(\$#,0.00);\$#,0.00
 		lineageTag: 8db7947f-2eea-4c08-94d5-f875d6e194fe
 
 	measure RevPAR = DIVIDE ( [Room Revenue], [Rooms Available] )
@@ -52,9 +52,8 @@ table _Measures
 		lineageTag: 85686cf0-07e2-4c08-a62f-0b7561f1b75b
 
 	measure 'Margin After Distribution %' = DIVIDE ( [Profit After Distribution], [Total Revenue] )
+		formatString: 0.0%;-0.0%;0.0%
 		lineageTag: 35e12842-c95b-4824-8663-890e0d8c70b2
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure 'Channel Room Revenue' = SUM ( BookingChannels[RoomRevenue] )
 		formatString: 0
@@ -70,9 +69,8 @@ table _Measures
 			    CALCULATE ( [Channel Room Revenue], BookingChannels[Channel] = "Online Travel Agencies" ),
 			    CALCULATE ( [Channel Room Revenue], REMOVEFILTERS ( BookingChannels[Channel] ) )
 			)
+		formatString: 0.0%;-0.0%;0.0%
 		lineageTag: 991934e2-1c57-43f2-b058-4f616b4412f3
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure 'Direct Share %' =
 			
@@ -107,7 +105,7 @@ table _Measures
 			    SUMX ( GuestExperience, GuestExperience[NetPromoterScore] * GuestExperience[SurveyResponses] ),
 			    [Survey Responses]
 			)
-		formatString: 0.00%;-0.00%;0.00%
+		formatString: 0.00
 		lineageTag: 44c6638b-3c15-48dd-9d4a-2f12f7a22de1
 
 	measure 'Overall Score' =
@@ -154,6 +152,82 @@ table _Measures
 		lineageTag: 77428bc1-0b56-4f39-a684-bfecb080d26d
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Occupancy Pill' =
+			
+			VAR _d = ( [Occupancy %] - [Occupancy % PY] ) * 100
+			RETURN
+			    IF ( _d >= 0, "▲ ", "▼ " ) & FORMAT ( ABS ( _d ), "0.0" ) & " pts vs "
+			        & ( MAX ( 'Date'[Year] ) - 1 )
+		lineageTag: 2fb27eb3-a1c8-4132-a81e-f33d648bc1cb
+
+	measure 'Occupancy % PY' = CALCULATE ( [Occupancy %], DATEADD ( 'Date'[Date], -1, YEAR ) )
+		lineageTag: 59c4adfc-4f75-4b53-a566-48a3f323b3dc
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Occupancy Footer' =
+			
+			"2021: " & FORMAT ( CALCULATE ( [Occupancy %], 'Date'[Year] = 2021 ), "0.0%" )
+		lineageTag: 9d93ff9c-b63a-4c02-b850-8438dd6ce5b9
+
+	measure 'Occupancy Icon' =
+			
+			"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23E8EDF6'/><g fill='none' stroke='%232F5A9E' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'><path d='M7 10v12M7 18h18v4M7 15h18M25 15v3'/><circle cx='11' cy='12.5' r='1.5'/><path d='M15 15v-3h7a3 3 0 0 1 3 3'/></g></svg>"
+		lineageTag: f2a9a8ab-af4b-4c6d-8827-a2f17dc8d329
+		dataCategory: ImageUrl
+
+	measure 'ADR Pill' =
+			
+			IF ( [ADR YoY %] >= 0, "▲ ", "▼ " ) & FORMAT ( ABS ( [ADR YoY %] ), "0.0%" ) & " vs " & ( MAX ( 'Date'[Year] ) - 1 )
+		lineageTag: 5859a10e-19d9-44ec-8ba1-e7c2166c3aa8
+
+	measure 'OTA Pill' =
+			
+			VAR _d = ( [OTA Share %] - [OTA Share % PY] ) * 100
+			RETURN IF ( _d >= 0, "▲ ", "▼ " ) & FORMAT ( ABS ( _d ), "0.0" ) & " pts vs " & ( MAX ( 'Date'[Year] ) - 1 )
+		lineageTag: 16a661ab-765f-41b1-95ed-392208137a58
+
+	measure 'ADR Δ Color' = IF ( [ADR YoY %] >= 0, "#2F5A9E", "#E8231D" )
+		lineageTag: d5ac2644-c6bd-456a-b496-419455d87f9f
+
+	measure 'Margin After Distribution % PY' = CALCULATE ( [Margin After Distribution %], DATEADD ( 'Date'[Date], -1, YEAR ) )
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 29bcbd97-698f-4279-ae11-6bf3b11e434d
+
+	measure 'Margin Δ Color' = IF ( [Margin After Distribution %] >= [Margin After Distribution % PY], "#2F5A9E", "#E8231D" )
+		lineageTag: f6bff763-ec15-4ce4-ab51-d1fcc9e9bd05
+
+	measure 'NPS PY' = CALCULATE ( [NPS], DATEADD ( 'Date'[Date], -1, YEAR ) )
+		lineageTag: 0a5ff9b6-bdd9-4ed7-8a09-f5be3450fc49
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'NPS Δ Color' = IF ( [NPS] >= [NPS PY], "#2F5A9E", "#E8231D" )
+		lineageTag: 402a7c19-a5ad-44bf-8777-bda063027b2a
+
+	measure 'Occupancy Δ Color' = IF ( [Occupancy %] >= [Occupancy % PY], "#2F5A9E", "#E8231D" )
+		lineageTag: a72313ec-7c00-47a8-9ea1-03441683eb63
+
+	measure 'OTA Share % PY' = CALCULATE ( [OTA Share %], DATEADD ( 'Date'[Date], -1, YEAR ) )
+		lineageTag: e6ccaeea-50cb-464c-ac9c-9c6ff096a4f9
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'OTA Δ Color' = IF ( [OTA Share %] > [OTA Share % PY], "#E8231D", "#2F5A9E" )
+		lineageTag: 384d3d0a-b442-40aa-a82f-5fa7d776a575
+
+	measure 'Margin Pill' =
+			
+			VAR _d = ( [Margin After Distribution %] - [Margin After Distribution % PY] ) * 100
+			RETURN IF ( _d >= 0, "▲ ", "▼ " ) & FORMAT ( ABS ( _d ), "0.0" ) & " pts vs " & ( MAX ( 'Date'[Year] ) - 1 )
+		lineageTag: 9cea8d0d-d118-44e4-a8b2-7ba0ed3feaca
+
+	measure 'NPS Pill' =
+			
+			VAR _d = [NPS] - [NPS PY]
+			RETURN IF ( _d >= 0, "▲ ", "▼ " ) & FORMAT ( ABS ( _d ), "0.0" ) & " vs " & ( MAX ( 'Date'[Year] ) - 1 )
+		lineageTag: f1e1b592-03cc-41a7-9b1a-8051ec601025
 
 	column Column
 		formatString: 0
