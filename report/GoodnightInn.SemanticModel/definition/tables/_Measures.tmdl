@@ -105,7 +105,7 @@ table _Measures
 			    SUMX ( GuestExperience, GuestExperience[NetPromoterScore] * GuestExperience[SurveyResponses] ),
 			    [Survey Responses]
 			)
-		formatString: 0.00
+		formatString: 0.0
 		lineageTag: 44c6638b-3c15-48dd-9d4a-2f12f7a22de1
 
 	measure 'Overall Score' =
