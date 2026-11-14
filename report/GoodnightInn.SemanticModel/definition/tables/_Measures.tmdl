@@ -228,6 +228,14 @@ table _Measures
 			RETURN IF ( _d >= 0, "▲ ", "▼ " ) & FORMAT ( ABS ( _d ), "0.0" ) & " vs " & ( MAX ( 'Date'[Year] ) - 1 )
 		lineageTag: f1e1b592-03cc-41a7-9b1a-8051ec601025
 
+	measure 'Complaints Change %' =
+			
+			VAR _now  = CALCULATE ( [Complaints per 1k Room Nights], 'Date'[Year] = 2025 )
+			VAR _then = CALCULATE ( [Complaints per 1k Room Nights], 'Date'[Year] = 2021 )
+			RETURN DIVIDE ( _now - _then, _then )
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: dfe9cfe0-901e-4c68-b72f-8a60767344aa
+
 	column Column
 		formatString: 0
 		lineageTag: 0535f51a-b77f-4758-b6d4-8241dd73f7b5

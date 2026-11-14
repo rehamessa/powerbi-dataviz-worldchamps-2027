@@ -274,7 +274,7 @@
             "labelPosition": {
               "expr": {
                 "Literal": {
-                  "Value": "'Under'"
+                  "Value": "'Above'"
                 }
               }
             },
@@ -282,6 +282,13 @@
               "expr": {
                 "Literal": {
                   "Value": "8D"
+                }
+              }
+            },
+            "labelDensity": {
+              "expr": {
+                "Literal": {
+                  "Value": "100L"
                 }
               }
             }
