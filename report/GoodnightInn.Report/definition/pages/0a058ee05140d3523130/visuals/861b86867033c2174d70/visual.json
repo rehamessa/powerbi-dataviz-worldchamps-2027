@@ -393,6 +393,13 @@
                   "Value": "false"
                 }
               }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Rooms fill up, guests like us less'"
+                }
+              }
             }
           }
         }

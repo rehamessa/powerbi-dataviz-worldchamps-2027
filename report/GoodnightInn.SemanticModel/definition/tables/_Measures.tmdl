@@ -81,9 +81,8 @@ table _Measures
 			    ),
 			    CALCULATE ( [Channel Room Revenue], REMOVEFILTERS ( BookingChannels[Channel] ) )
 			)
+		formatString: 0%;-0%;0%
 		lineageTag: f386cd8a-bfcd-4537-9218-dd2515d2f4f4
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure 'Channel Mix %' =
 			
