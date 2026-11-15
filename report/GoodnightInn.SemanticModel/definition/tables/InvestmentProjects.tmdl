@@ -128,6 +128,18 @@ table InvestmentProjects
 
 		annotation SummarizationSetBy = Automatic
 
+	column Recommended =
+			
+			IF (
+			    InvestmentProjects[ProjectID] IN { "GI-01", "GI-02", "GI-03", "GI-04", "GI-05", "GI-09", "GI-10" },
+			    "Funded",
+			    "Not funded"
+			)
+		lineageTag: e683db70-6f7c-40c6-8468-d20240c12508
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
 	partition InvestmentProjects = m
 		mode: import
 		source =

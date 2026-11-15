@@ -236,6 +236,97 @@ table _Measures
 		formatString: 0.00%;-0.00%;0.00%
 		lineageTag: dfe9cfe0-901e-4c68-b72f-8a60767344aa
 
+	measure 'Scenario Used' = SELECTEDVALUE ( Scenario[Scenario], "Expected" )
+		lineageTag: 3996afe6-aee2-4a28-85e6-54ab2725d06c
+
+	measure 'Brand Budget' = LOOKUPVALUE ( Brands[InvestmentBudgetUSD], Brands[Brand], "Goodnight Inn" )
+		formatString: 0
+		lineageTag: e0d63985-9a45-4523-83b9-91675aa1b4c4
+
+	measure 'Portfolio Capex' =
+			
+			CALCULATE ( SUM ( InvestmentProjects[CapexUSD] ), InvestmentProjects[Brand] = "Goodnight Inn" )
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: 93f54124-84b5-43ff-8e2c-bf62d50dd276
+
+	measure 'Budget Remaining' = [Brand Budget] - [Portfolio Capex]
+		formatString: 0
+		lineageTag: 2532ef46-1417-43e8-8095-50596c18fbe5
+
+	measure 'Investment Capex' =
+			
+			VAR _s = [Scenario Used]
+			RETURN CALCULATE ( SUM ( ProjectFlows[CapexUSD] ), REMOVEFILTERS ( Scenario ), ProjectFlows[Scenario] = _s )
+		lineageTag: e67ea54c-aa30-47a8-9c8e-21934cc047a5
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Incremental Operating Profit' =
+			
+			VAR _s = [Scenario Used]
+			RETURN CALCULATE ( SUM ( ProjectFlows[ProfitImpactUSD] ), REMOVEFILTERS ( Scenario ), ProjectFlows[Scenario] = _s )
+		lineageTag: 67de62cf-4de7-46c5-a69d-2264b62ac3d2
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Revenue Lost During Works' =
+			
+			VAR _s = [Scenario Used]
+			RETURN CALCULATE ( SUM ( ProjectFlows[LostRevenueUSD] ), REMOVEFILTERS ( Scenario ), ProjectFlows[Scenario] = _s )
+		lineageTag: 6e65aa95-f86e-4c70-afda-7464354b65e8
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Net Cash Flow' =
+			
+			VAR _s = [Scenario Used]
+			RETURN CALCULATE ( SUM ( ProjectFlows[NetCashFlowUSD] ), REMOVEFILTERS ( Scenario ), ProjectFlows[Scenario] = _s )
+		lineageTag: 69941b0b-6479-42e6-b333-d8d89e765886
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'NPV to 2032' =
+			
+			VAR _s = [Scenario Used]
+			RETURN
+			    CALCULATE (
+			        SUM ( ProjectFlows[PresentValueUSD] ),
+			        REMOVEFILTERS ( Scenario ), REMOVEFILTERS ( 'Date' ),
+			        ProjectFlows[Scenario] = _s
+			    )
+		lineageTag: 0b6a11f2-d224-4556-a436-7d23c4ad426c
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Run-rate Profit 2032' =
+			
+			VAR _s = [Scenario Used]
+			RETURN
+			    CALCULATE (
+			        SUM ( ProjectFlows[ProfitImpactUSD] ),
+			        REMOVEFILTERS ( Scenario ), REMOVEFILTERS ( 'Date' ),
+			        ProjectFlows[Scenario] = _s,
+			        'Date'[Year] = 2032
+			    )
+		lineageTag: 9ba7a026-094e-4cca-bedf-02003e38c5d4
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Cumulative Net Cash Flow' =
+			
+			VAR _s = [Scenario Used]
+			VAR _last = MAX ( 'Date'[Date] )
+			RETURN
+			    CALCULATE (
+			        SUM ( ProjectFlows[NetCashFlowUSD] ),
+			        REMOVEFILTERS ( Scenario ), REMOVEFILTERS ( 'Date' ),
+			        ProjectFlows[Scenario] = _s,
+			        ProjectFlows[Month] <= _last
+			    )
+		lineageTag: dc8fea2e-9c40-4f5b-a695-d3e52a409040
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	column Column
 		formatString: 0
 		lineageTag: 0535f51a-b77f-4758-b6d4-8241dd73f7b5

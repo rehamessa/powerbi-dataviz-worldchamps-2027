@@ -13,45 +13,63 @@
     "visualType": "pivotTable",
     "query": {
       "queryState": {
-        "Rows": {
-          "projections": [
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "ProjectFlows"
-                    }
-                  },
-                  "Property": "ProjectID"
-                }
-              },
-              "queryRef": "ProjectFlows.ProjectID",
-              "nativeQueryRef": "ProjectID",
-              "active": true
-            }
-          ]
-        },
         "Values": {
           "projections": [
             {
               "field": {
-                "Aggregation": {
+                "Measure": {
                   "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "ProjectFlows"
-                        }
-                      },
-                      "Property": "PresentValueUSD"
+                    "SourceRef": {
+                      "Entity": "_Measures"
                     }
                   },
-                  "Function": 0
+                  "Property": "Portfolio Capex"
                 }
               },
-              "queryRef": "Sum(ProjectFlows.PresentValueUSD)",
-              "nativeQueryRef": "Sum of PresentValueUSD"
+              "queryRef": "_Measures.Portfolio Capex",
+              "nativeQueryRef": "Portfolio Capex"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Budget Remaining"
+                }
+              },
+              "queryRef": "_Measures.Budget Remaining",
+              "nativeQueryRef": "Budget Remaining"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "NPV to 2032"
+                }
+              },
+              "queryRef": "_Measures.NPV to 2032",
+              "nativeQueryRef": "NPV to 2032"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "_Measures"
+                    }
+                  },
+                  "Property": "Run-rate Profit 2032"
+                }
+              },
+              "queryRef": "_Measures.Run-rate Profit 2032",
+              "nativeQueryRef": "Run-rate Profit 2032"
             }
           ]
         }
