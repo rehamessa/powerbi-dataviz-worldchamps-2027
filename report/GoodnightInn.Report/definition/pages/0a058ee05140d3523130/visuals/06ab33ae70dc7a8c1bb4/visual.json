@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "06ab33ae70dc7a8c1bb4",
   "position": {
-    "x": 759.10240955105951,
-    "y": 480.6855383364076,
-    "z": 1009,
+    "x": 756,
+    "y": 469,
+    "z": 4000,
     "height": 239,
     "width": 512.06184321777994,
-    "tabOrder": 1008
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "barChart",
@@ -472,23 +472,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "7e34b17bec1d710204cb",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "GuestComplaints"
-              }
-            },
-            "Property": "Category"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }
