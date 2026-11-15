@@ -95,3 +95,20 @@ relationship 93e032f0-3af4-4b9a-83fe-640fb81482df
 	fromColumn: Hotels.ProductDate
 	toColumn: LocalDateTable_a7628e39-8c2b-4eed-a132-dcf792ac0b87.Date
 
+relationship ef6208fe-2fde-4f38-ad34-1e7c4125124a
+	joinOnDateBehavior: datePartOnly
+	fromColumn: ProjectFlows.EndDate
+	toColumn: LocalDateTable_abb2362c-feb0-4270-951b-9122648dab55.Date
+
+relationship 3c40d112-cfe9-6fd3-b826-4f6ba819184e
+	fromColumn: ProjectFlows.ProjectID
+	toColumn: InvestmentProjects.ProjectID
+
+relationship 5e6fb9f1-17fc-80f5-0967-407e11258563
+	fromColumn: ProjectFlows.Scenario
+	toColumn: Scenario.Scenario
+
+relationship eac4e6e4-a739-17dc-e4c7-82596bafbb82
+	fromColumn: ProjectFlows.Month
+	toColumn: Date.Date
+

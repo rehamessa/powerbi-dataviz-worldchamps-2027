@@ -1,0 +1,196 @@
+table ProjectFlows
+	lineageTag: bdc031c0-711e-4038-a434-08167f96131b
+
+	column ProjectID
+		lineageTag: 289fa282-a315-4c5d-a990-acb406a41bcd
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [ProjectID]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Month
+		formatString: General Date
+		lineageTag: 01f6ab52-07ac-4df9-84fb-be5e9a6f4a0d
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Month]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Scenario
+		lineageTag: 7892cd05-93c6-452b-9d25-b46f6ce4c180
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Scenario]
+
+		annotation SummarizationSetBy = Automatic
+
+	column StartDate
+		lineageTag: 2c43c486-92c0-43f2-9f22-26602f542db9
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [StartDate]
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column EndDate
+		formatString: General Date
+		lineageTag: 4f4b55f1-4b7b-4224-9210-4d955a6c09ad
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [EndDate]
+
+		variation Variation
+			isDefault
+			relationship: ef6208fe-2fde-4f38-ad34-1e7c4125124a
+			defaultHierarchy: LocalDateTable_abb2362c-feb0-4270-951b-9122648dab55.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column CapexUSD
+		lineageTag: b463fccb-9b57-408e-8050-649af3dcf33f
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [CapexUSD]
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column LostRevenueUSD
+		lineageTag: 1fa46fc2-df59-437d-89f4-fb4291395b19
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [LostRevenueUSD]
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column ProfitImpactUSD
+		lineageTag: e25a6b17-07e3-4a29-80bb-5b2464d30cbf
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [ProfitImpactUSD]
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column RevenueImpactUSD
+		lineageTag: f4eb4302-a5bf-4530-88d7-9ca8dc440562
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [RevenueImpactUSD]
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column NetCashFlowUSD
+		lineageTag: a96fe4c7-67d5-4147-8812-6c13d4e16d86
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [NetCashFlowUSD]
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column DiscountFactor
+		lineageTag: 1e48685c-d53f-428f-a49b-8ef029cc5d71
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [DiscountFactor]
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column PresentValueUSD
+		lineageTag: c4362032-6fb4-4253-9236-6f51cb6e8d34
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [PresentValueUSD]
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition ProjectFlows = calculated
+		mode: import
+		source =
+				
+				VAR _Brand = "Goodnight Inn"
+				VAR _R1 = LOOKUPVALUE ( FinanceParameters[Value], FinanceParameters[Parameter], "Ramp-up - first year after completion" )
+				VAR _R2 = LOOKUPVALUE ( FinanceParameters[Value], FinanceParameters[Parameter], "Ramp-up - second year after completion" )
+				VAR _R3 = LOOKUPVALUE ( FinanceParameters[Value], FinanceParameters[Parameter], "Ramp-up - third year onwards" )
+				VAR _DR = LOOKUPVALUE ( FinanceParameters[Value], FinanceParameters[Parameter], "Discount rate" )
+				VAR _Proj =
+				    ADDCOLUMNS (
+				        SELECTCOLUMNS (
+				            FILTER ( InvestmentProjects, InvestmentProjects[Brand] = _Brand ),
+				            "ProjectID", InvestmentProjects[ProjectID],
+				            "Capex", InvestmentProjects[CapexUSD],
+				            "Dur", InvestmentProjects[DurationMonths],
+				            "OOS", InvestmentProjects[RoomsOutOfServicePct],
+				            "Earliest", InvestmentProjects[EarliestStart],
+				            "Dep", InvestmentProjects[DependsOn]
+				        ),
+				        "StartDate",
+				            VAR _d = [Dep]
+				            VAR _depEnd =
+				                IF ( _d <> "",
+				                    EDATE (
+				                        LOOKUPVALUE ( InvestmentProjects[EarliestStart], InvestmentProjects[ProjectID], _d ),
+				                        LOOKUPVALUE ( InvestmentProjects[DurationMonths], InvestmentProjects[ProjectID], _d ) ) )
+				            RETURN IF ( _depEnd > [Earliest], _depEnd, [Earliest] )
+				    )
+				VAR _Proj2 = ADDCOLUMNS ( _Proj, "EndDate", EDATE ( [StartDate], [Dur] ) )
+				VAR _Months = SELECTCOLUMNS ( FILTER ( 'Date', DAY ( 'Date'[Date] ) = 1 && 'Date'[Year] >= 2026 ), "Month", 'Date'[Date] )
+				VAR _Grid = CROSSJOIN ( _Proj2, _Months, SELECTCOLUMNS ( Scenario, "Scenario", Scenario[Scenario] ) )
+				VAR _Step1 =
+				    ADDCOLUMNS ( _Grid,
+				        "Building", [Month] >= [StartDate] && [Month] < [EndDate],
+				        "MonthsAfterEnd", ( YEAR ( [Month] ) - YEAR ( [EndDate] ) ) * 12 + MONTH ( [Month] ) - MONTH ( [EndDate] ),
+				        "AnnualProfit", LOOKUPVALUE ( InvestmentScenarios[AnnualOperatingProfitImpactUSD],
+				            InvestmentScenarios[ProjectID], [ProjectID], InvestmentScenarios[Scenario], [Scenario] ),
+				        "AnnualRevenue", LOOKUPVALUE ( InvestmentScenarios[AnnualRevenueImpactUSD],
+				            InvestmentScenarios[ProjectID], [ProjectID], InvestmentScenarios[Scenario], [Scenario] )
+				    )
+				VAR _Step2 =
+				    ADDCOLUMNS ( _Step1,
+				        "Ramp", SWITCH ( TRUE (), [MonthsAfterEnd] < 0, 0, [MonthsAfterEnd] < 12, _R1, [MonthsAfterEnd] < 24, _R2, _R3 ),
+				        "CapexUSD", IF ( [Building], DIVIDE ( [Capex], [Dur] ), 0 ),
+				        "LostRevenueUSD",
+				            IF ( [Building] && [OOS] > 0,
+				                VAR _pid = [ProjectID]
+				                VAR _mo = MONTH ( [Month] )
+				                VAR _hotels = SELECTCOLUMNS ( FILTER ( InvestmentProjectProperties, InvestmentProjectProperties[ProjectID] = _pid ), "H", InvestmentProjectProperties[HotelID] )
+				                RETURN [OOS] * SUMX ( FILTER ( MonthlyPerformance,
+				                        YEAR ( MonthlyPerformance[Month] ) = 2025 && MONTH ( MonthlyPerformance[Month] ) = _mo
+				                            && MonthlyPerformance[HotelID] IN _hotels ), MonthlyPerformance[TotalRevenue] ),
+				                0 )
+				    )
+				VAR _Step3 =
+				    ADDCOLUMNS ( _Step2,
+				        "ProfitImpactUSD", [Ramp] * [AnnualProfit] / 12,
+				        "RevenueImpactUSD", [Ramp] * [AnnualRevenue] / 12,
+				        "DiscountFactor", POWER ( 1 + _DR, - DATEDIFF ( DATE ( 2026, 1, 1 ), [Month], DAY ) / 365.25 )
+				    )
+				RETURN
+				    SELECTCOLUMNS ( _Step3,
+				        "ProjectID", [ProjectID], "Month", [Month], "Scenario", [Scenario],
+				        "StartDate", [StartDate], "EndDate", [EndDate],
+				        "CapexUSD", [CapexUSD], "LostRevenueUSD", [LostRevenueUSD],
+				        "ProfitImpactUSD", [ProfitImpactUSD], "RevenueImpactUSD", [RevenueImpactUSD],
+				        "NetCashFlowUSD", [ProfitImpactUSD] - [LostRevenueUSD] - [CapexUSD],
+				        "DiscountFactor", [DiscountFactor],
+				        "PresentValueUSD", ( [ProfitImpactUSD] - [LostRevenueUSD] - [CapexUSD] ) * [DiscountFactor]
+				    )
+
+	annotation PBI_Id = 2bbfd47ceee54ad09f376234dc62192e
+

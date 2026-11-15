@@ -21,7 +21,19 @@
                   {
                     "value": "Full rooms, fading loyalty",
                     "textStyle": {
+                      "fontWeight": "bold",
                       "fontSize": "20pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Where does Goodnight Inn stand after five years?",
+                    "textStyle": {
+                      "fontSize": "11pt",
+                      "color": "#9196be"
                     }
                   }
                 ]

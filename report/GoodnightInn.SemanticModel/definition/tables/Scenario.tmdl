@@ -13,7 +13,7 @@ table Scenario
 		dataType: int64
 		formatString: 0
 		lineageTag: 9c071d50-e64d-49ab-baf4-4f0d084600b9
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: ScenarioOrder
 
 		annotation SummarizationSetBy = Automatic
