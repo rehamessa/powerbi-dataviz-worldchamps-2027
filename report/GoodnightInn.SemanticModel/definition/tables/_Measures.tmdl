@@ -308,9 +308,8 @@ table _Measures
 			        ProjectFlows[Scenario] = _s,
 			        'Date'[Year] = 2032
 			    )
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
 		lineageTag: 9ba7a026-094e-4cca-bedf-02003e38c5d4
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure 'Cumulative Net Cash Flow' =
 			

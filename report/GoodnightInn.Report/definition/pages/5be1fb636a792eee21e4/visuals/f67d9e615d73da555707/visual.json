@@ -2,8 +2,8 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "f67d9e615d73da555707",
   "position": {
-    "x": 756,
-    "y": 228,
+    "x": 747.58885686839585,
+    "y": 480.7684918347743,
     "z": 2000,
     "height": 239,
     "width": 512.06184321777994,
@@ -29,6 +29,24 @@
               "queryRef": "Date.Year",
               "nativeQueryRef": "Year",
               "active": true
+            }
+          ]
+        },
+        "Rows": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "InvestmentProjects"
+                    }
+                  },
+                  "Property": "Recommended"
+                }
+              },
+              "queryRef": "InvestmentProjects.Recommended",
+              "nativeQueryRef": "Recommended"
             }
           ]
         },

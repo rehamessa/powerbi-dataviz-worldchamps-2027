@@ -1838,16 +1838,6 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "factor": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
-			          }
-			        },
-			        {
 			          "issue": {
 			            "Type": "Noun",
 			            "State": "Suggested",
@@ -8681,12 +8671,6 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "initiative": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
 			          "growth inventiveness": {
 			            "Type": "Noun",
 			            "State": "Suggested",
@@ -8737,53 +8721,53 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "inventiveness": {
+			          "growth ascendency": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.491
+			            "Weight": 0.475
 			          }
 			        },
 			        {
-			          "creativity": {
+			          "growth ascendancy": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.491
+			            "Weight": 0.475
 			          }
 			        },
 			        {
-			          "enterprise": {
+			          "growth edge": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.491
+			            "Weight": 0.461
 			          }
 			        },
 			        {
-			          "resourcefulness": {
+			          "growth advantage": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.491
+			            "Weight": 0.461
 			          }
 			        },
 			        {
-			          "ingenuity": {
+			          "growth lead": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.491
+			            "Weight": 0.461
 			          }
 			        }
 			      ]
@@ -10337,12 +10321,6 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "revenue impact USD": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
 			          "annual income impact usd": {
 			            "Type": "Noun",
 			            "State": "Suggested",
@@ -10350,16 +10328,6 @@ cultureInfo en-US
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.617
-			          }
-			        },
-			        {
-			          "income impact usd": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.609
 			          }
 			        },
 			        {
@@ -10390,26 +10358,6 @@ cultureInfo en-US
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.599
-			          }
-			        },
-			        {
-			          "turnover impact usd": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.591
-			          }
-			        },
-			        {
-			          "yield impact usd": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.591
 			          }
 			        }
 			      ]
@@ -10443,12 +10391,6 @@ cultureInfo en-US
 			        },
 			        {
 			          "impact USD": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "profit impact USD": {
 			            "State": "Generated",
 			            "Weight": 0.97
 			          }
@@ -18388,9 +18330,2853 @@ cultureInfo en-US
 			          }
 			        }
 			      ]
+			    },
+			    "investment_project.recommended": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "InvestmentProjects",
+			          "ConceptualProperty": "Recommended"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "recommended": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "optional": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "suggested": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.complaints_change_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "Complaints Change %"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "complaints change %": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "complaint change percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "complaint change pct": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.739
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.scenario_used": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "Scenario Used"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "scenario used": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "situation used": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "setup used": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "development used": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "consequence used": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "state used": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "set-up used": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "setting used": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "picture used": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.brand_budget": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "Brand Budget"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "brand budget": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "budget": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "brand account": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "brand cost": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "brand finance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "account": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "finance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.portfolio_capex": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "Portfolio Capex"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "portfolio capex": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Capex": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "INVESTED": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.budget_remaining": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "Budget Remaining"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "budget remaining": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "remaining": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "account remaining": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "cost remaining": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "finance remaining": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "residual": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "outstanding": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "lingering": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "enduring": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "lasting": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "RESERVE": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.investment_capex": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "Investment Capex"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "investment capex": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.incremental_operating_profit": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "Incremental Operating Profit"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "incremental operating profit": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "profit": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "operating profit": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "incremental operating income": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "incremental operating revenue": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "operating income": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "operating revenue": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "incremental operating turnover": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "incremental operating return": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "incremental operating yield": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "income": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "operating turnover": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "operating return": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.revenue_lost_during_works": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "Revenue Lost During Works"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "revenue lost during works": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "income lost during works": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "profit lost during works": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        },
+			        {
+			          "turnover lost during works": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        },
+			        {
+			          "yield lost during works": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.net_cash_flow": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "Net Cash Flow"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "net cash flow": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "flow": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "cash flow": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "net cash movement": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "cash movement": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "net cash current": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "net cash stream": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "net cash drift": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "net cash tide": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "net cash course": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "movement": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "cash current": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "cash stream": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.NPV_to_2032": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "NPV to 2032"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "NPV to 2032": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.runrate_profit_2032": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "Run-rate Profit 2032"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "run-rate profit 2032": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "run rate profit 2032": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "profit 2032": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "rate profit 2032": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "Profit / yr.": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "PROFIT FROM 2032": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "entity__measure.cumulative_net_cash_flow": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "Cumulative Net Cash Flow"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "cumulative net cash flow": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "flow": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "cash flow": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "cumulative net cash movement": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "cash movement": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "cumulative net cash current": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "cumulative net cash stream": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "cumulative net cash drift": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "cumulative net cash tide": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "cumulative net cash course": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "movement": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "cash current": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "cash stream": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        }
+			      ]
+			    },
+			    "project_flow": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ProjectFlows"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "project flow": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "ProjectFlows": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "flow": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "assignment flow": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "development flow": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "blueprint flow": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "design flow": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "estimate flow": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "forecast flow": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "initiative flow": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "plan flow": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "task flow": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "project movement": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        }
+			      ]
+			    },
+			    "project_flow.project_ID": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ProjectFlows",
+			          "ConceptualProperty": "ProjectID"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "project ID": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "ProjectID": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "project": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "project identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "project identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "project identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "assignment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "development": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "project credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "blueprint": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "design": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "estimate": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "forecast": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ]
+			    },
+			    "project_flow.month": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ProjectFlows",
+			          "ConceptualProperty": "Month"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
+			          "mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "project_flow.scenario": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ProjectFlows",
+			          "ConceptualProperty": "Scenario"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "scenario": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "situation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "setup": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "development": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "consequence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "state": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "set-up": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "setting": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "picture": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "project_flow.start_date": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ProjectFlows",
+			          "ConceptualProperty": "StartDate"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "start date": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "StartDate": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "start moment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "start period": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "commencement date": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "inception date": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "kickoff date": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "beginning date": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "first date": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "initiation date": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "launch date": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "kick off date": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        }
+			      ]
+			    },
+			    "project_flow.end_date": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ProjectFlows",
+			          "ConceptualProperty": "EndDate"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "end date": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "EndDate": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
+			          "end moment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "end period": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "culmination date": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "completion date": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "conclusion date": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "expiration date": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "cease date": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "end time": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "close date": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "finish date": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "project_flow.end_date.date_hierarchy": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ProjectFlows",
+			          "VariationSource": "EndDate",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "end date hierarchy": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date hierarchy": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "project_flow.end_date.year": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ProjectFlows",
+			          "VariationSource": "EndDate",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Year"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "end year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "end date year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date year": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "end date yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "end yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "date yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "culmination date year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.615
+			          }
+			        },
+			        {
+			          "completion date year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "conclusion date year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "expiration date year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "end moment year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "completion year": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "project_flow.end_date.quarter": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ProjectFlows",
+			          "VariationSource": "EndDate",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Quarter"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "end quarter": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "quarter": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "end date quarter": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date quarter": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "end date qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.846
+			          }
+			        },
+			        {
+			          "end qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.833
+			          }
+			        },
+			        {
+			          "date qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.833
+			          }
+			        },
+			        {
+			          "qtr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.818
+			          }
+			        },
+			        {
+			          "culmination date quarter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.615
+			          }
+			        },
+			        {
+			          "completion date quarter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "conclusion date quarter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "expiration date quarter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "end moment quarter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "completion quarter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "project_flow.end_date.month": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ProjectFlows",
+			          "VariationSource": "EndDate",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Month"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "end month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "end date month": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date month": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "end date mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.762
+			          }
+			        },
+			        {
+			          "end mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "date mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "mth": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "culmination date month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.615
+			          }
+			        },
+			        {
+			          "completion date month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "conclusion date month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "expiration date month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "end moment month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "completion month": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "project_flow.end_date.day": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ProjectFlows",
+			          "VariationSource": "EndDate",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Date Hierarchy",
+			          "HierarchyLevel": "Day"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "end day": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "day": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "end date day": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "date day": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "culmination date day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.615
+			          }
+			        },
+			        {
+			          "completion date day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "conclusion date day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "expiration date day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "end moment day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "completion day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "conclusion day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "expiration day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "moment day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "cease date day": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.597
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "project_flow.capex_USD": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ProjectFlows",
+			          "ConceptualProperty": "CapexUSD"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "capex USD": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "CapexUSD": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "project_flow.lost_revenue_USD": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ProjectFlows",
+			          "ConceptualProperty": "LostRevenueUSD"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "lost revenue USD": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "LostRevenueUSD": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "USD": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "revenue USD": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "lost income usd": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "income usd": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "lost profit usd": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "lost turnover usd": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "lost yield usd": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "profit usd": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "turnover usd": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "yield usd": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "project_flow.profit_impact_USD": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ProjectFlows",
+			          "ConceptualProperty": "ProfitImpactUSD"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "profit impact USD": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "ProfitImpactUSD": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "USD": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "impact USD": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "project_flow.revenue_impact_USD": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ProjectFlows",
+			          "ConceptualProperty": "RevenueImpactUSD"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "revenue impact USD": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "RevenueImpactUSD": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "USD": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "impact USD": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "income impact usd": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "turnover impact usd": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "yield impact usd": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "project_flow.net_cash_flow_USD": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ProjectFlows",
+			          "ConceptualProperty": "NetCashFlowUSD"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "net cash flow USD": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "NetCashFlowUSD": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "USD": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "flow USD": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "cash flow USD": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "project_flow.discount_factor": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ProjectFlows",
+			          "ConceptualProperty": "DiscountFactor"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "discount factor": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "DiscountFactor": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "factor": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "discount aspect": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "discount element": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "discount thing": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "discount consideration": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "aspect": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "element": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "thing": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "consideration": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "discount issue": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "discount influence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        }
+			      ]
+			    },
+			    "project_flow.present_value_USD": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "ProjectFlows",
+			          "ConceptualProperty": "PresentValueUSD"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "present value USD": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "PresentValueUSD": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "USD": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "value USD": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "investment_project.solves": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "InvestmentProjects",
+			          "ConceptualProperty": "Solves"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "solves": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "investment_project.payback_year": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "InvestmentProjects",
+			          "ConceptualProperty": "Payback Years"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "payback year": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "payback yr": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "investment_project.short_name": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "InvestmentProjects",
+			          "ConceptualProperty": "Short Name"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "short name": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "short": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "short nickname": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "short title": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "short label": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "short tag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "small": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "little": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "petite": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "squat": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "diminutive": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "brief": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "Initiative": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
+			    "hotel_product_date_has_date_hierarchy": {
+			      "Binding": {
+			        "ConceptualEntity": "Hotels"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "hotel.product_date": {
+			          "Target": {
+			            "Entity": "hotel.product_date"
+			          }
+			        },
+			        "hotel.product_date.date_hierarchy": {
+			          "Target": {
+			            "Entity": "hotel.product_date.date_hierarchy"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "hotel.product_date"
+			            },
+			            "Object": {
+			              "Role": "hotel.product_date.date_hierarchy"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "product_dates_have_product_date_hierarchies"
+			        }
+			      ]
+			    },
+			    "hotel_last_renovation_date_date_hierarchy_has_hotel_last_renovation_date_day": {
+			      "Binding": {
+			        "ConceptualEntity": "Hotels"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "hotel.last_renovation_date.date_hierarchy": {
+			          "Target": {
+			            "Entity": "hotel.last_renovation_date.date_hierarchy"
+			          }
+			        },
+			        "hotel.last_renovation_date.day": {
+			          "Target": {
+			            "Entity": "hotel.last_renovation_date.day"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "hotel.last_renovation_date.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "hotel.last_renovation_date.day"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "last_renovation_date_hierarchies_have_last_renovation_days"
+			        }
+			      ]
+			    },
+			    "hotel_last_renovation_date_date_hierarchy_has_hotel_last_renovation_date_month": {
+			      "Binding": {
+			        "ConceptualEntity": "Hotels"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "hotel.last_renovation_date.date_hierarchy": {
+			          "Target": {
+			            "Entity": "hotel.last_renovation_date.date_hierarchy"
+			          }
+			        },
+			        "hotel.last_renovation_date.month": {
+			          "Target": {
+			            "Entity": "hotel.last_renovation_date.month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "hotel.last_renovation_date.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "hotel.last_renovation_date.month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "last_renovation_date_hierarchies_have_last_renovation_months"
+			        }
+			      ]
+			    },
 			    "hotel_last_renovation_date_date_hierarchy_has_hotel_last_renovation_date_quarter": {
 			      "Binding": {
 			        "ConceptualEntity": "Hotels"
@@ -18652,6 +21438,151 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "opening_dates_have_opening_date_hierarchies"
+			        }
+			      ]
+			    },
+			    "project_flow_has_date": {
+			      "Binding": {
+			        "ConceptualEntity": "ProjectFlows"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "project_flow": {
+			          "Target": {
+			            "Entity": "project_flow"
+			          }
+			        },
+			        "date": {
+			          "Target": {
+			            "Entity": "date"
+			          },
+			          "Nouns": [
+			            {
+			              "month": {
+			                "State": "Generated"
+			              }
+			            }
+			          ]
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "project_flow"
+			            },
+			            "Object": {
+			              "Role": "date"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "project_flows_have_dates"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "date"
+			            },
+			            "Object": {
+			              "Role": "project_flow"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "dates_have_project_flows"
+			        }
+			      ]
+			    },
+			    "project_flow_has_scenario": {
+			      "Binding": {
+			        "ConceptualEntity": "ProjectFlows"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "project_flow": {
+			          "Target": {
+			            "Entity": "project_flow"
+			          }
+			        },
+			        "scenario": {
+			          "Target": {
+			            "Entity": "scenario"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "project_flow"
+			            },
+			            "Object": {
+			              "Role": "scenario"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "project_flows_have_scenarios"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "scenario"
+			            },
+			            "Object": {
+			              "Role": "project_flow"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "scenarios_have_project_flows"
+			        }
+			      ]
+			    },
+			    "project_flow_has_investment_project": {
+			      "Binding": {
+			        "ConceptualEntity": "ProjectFlows"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "project_flow": {
+			          "Target": {
+			            "Entity": "project_flow"
+			          }
+			        },
+			        "investment_project": {
+			          "Target": {
+			            "Entity": "investment_project"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "project_flow"
+			            },
+			            "Object": {
+			              "Role": "investment_project"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "project_flows_have_investment_projects"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "investment_project"
+			            },
+			            "Object": {
+			              "Role": "project_flow"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "investment_projects_have_project_flows"
 			        }
 			      ]
 			    },
@@ -19515,6 +22446,963 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "hotels_have_booking_channels"
+			        }
+			      ]
+			    },
+			    "investment_project_has_short_name": {
+			      "Binding": {
+			        "ConceptualEntity": "InvestmentProjects"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "investment_project": {
+			          "Target": {
+			            "Entity": "investment_project"
+			          }
+			        },
+			        "investment_project.short_name": {
+			          "Target": {
+			            "Entity": "investment_project.short_name"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "investment_project"
+			            },
+			            "Object": {
+			              "Role": "investment_project.short_name"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "investment_projects_have_short_names"
+			        }
+			      ]
+			    },
+			    "investment_project_has_payback_year": {
+			      "Binding": {
+			        "ConceptualEntity": "InvestmentProjects"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "investment_project": {
+			          "Target": {
+			            "Entity": "investment_project"
+			          }
+			        },
+			        "investment_project.payback_year": {
+			          "Target": {
+			            "Entity": "investment_project.payback_year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "investment_project"
+			            },
+			            "Object": {
+			              "Role": "investment_project.payback_year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "investment_projects_have_payback_years"
+			        }
+			      ]
+			    },
+			    "investment_project_has_solves": {
+			      "Binding": {
+			        "ConceptualEntity": "InvestmentProjects"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "investment_project": {
+			          "Target": {
+			            "Entity": "investment_project"
+			          }
+			        },
+			        "investment_project.solves": {
+			          "Target": {
+			            "Entity": "investment_project.solves"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "investment_project"
+			            },
+			            "Object": {
+			              "Role": "investment_project.solves"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "investment_projects_have_solves"
+			        }
+			      ]
+			    },
+			    "project_flow_has_present_value_USD": {
+			      "Binding": {
+			        "ConceptualEntity": "ProjectFlows"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "project_flow": {
+			          "Target": {
+			            "Entity": "project_flow"
+			          }
+			        },
+			        "project_flow.present_value_USD": {
+			          "Target": {
+			            "Entity": "project_flow.present_value_USD"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "project_flow"
+			            },
+			            "Object": {
+			              "Role": "project_flow.present_value_USD"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "project_flows_have_present_value_USD"
+			        }
+			      ]
+			    },
+			    "project_flow_has_discount_factor": {
+			      "Binding": {
+			        "ConceptualEntity": "ProjectFlows"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "project_flow": {
+			          "Target": {
+			            "Entity": "project_flow"
+			          }
+			        },
+			        "project_flow.discount_factor": {
+			          "Target": {
+			            "Entity": "project_flow.discount_factor"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "project_flow"
+			            },
+			            "Object": {
+			              "Role": "project_flow.discount_factor"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "project_flows_have_discount_factors"
+			        }
+			      ]
+			    },
+			    "project_flow_has_net_cash_flow_USD": {
+			      "Binding": {
+			        "ConceptualEntity": "ProjectFlows"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "project_flow": {
+			          "Target": {
+			            "Entity": "project_flow"
+			          }
+			        },
+			        "project_flow.net_cash_flow_USD": {
+			          "Target": {
+			            "Entity": "project_flow.net_cash_flow_USD"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "project_flow"
+			            },
+			            "Object": {
+			              "Role": "project_flow.net_cash_flow_USD"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "project_flows_have_net_cash_flow_USD"
+			        }
+			      ]
+			    },
+			    "project_flow_has_revenue_impact_USD": {
+			      "Binding": {
+			        "ConceptualEntity": "ProjectFlows"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "project_flow": {
+			          "Target": {
+			            "Entity": "project_flow"
+			          }
+			        },
+			        "project_flow.revenue_impact_USD": {
+			          "Target": {
+			            "Entity": "project_flow.revenue_impact_USD"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "project_flow"
+			            },
+			            "Object": {
+			              "Role": "project_flow.revenue_impact_USD"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "project_flows_have_revenue_impact_USD"
+			        }
+			      ]
+			    },
+			    "project_flow_has_profit_impact_USD": {
+			      "Binding": {
+			        "ConceptualEntity": "ProjectFlows"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "project_flow": {
+			          "Target": {
+			            "Entity": "project_flow"
+			          }
+			        },
+			        "project_flow.profit_impact_USD": {
+			          "Target": {
+			            "Entity": "project_flow.profit_impact_USD"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "project_flow"
+			            },
+			            "Object": {
+			              "Role": "project_flow.profit_impact_USD"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "project_flows_have_profit_impact_USD"
+			        }
+			      ]
+			    },
+			    "project_flow_has_lost_revenue_USD": {
+			      "Binding": {
+			        "ConceptualEntity": "ProjectFlows"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "project_flow": {
+			          "Target": {
+			            "Entity": "project_flow"
+			          }
+			        },
+			        "project_flow.lost_revenue_USD": {
+			          "Target": {
+			            "Entity": "project_flow.lost_revenue_USD"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "project_flow"
+			            },
+			            "Object": {
+			              "Role": "project_flow.lost_revenue_USD"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "project_flows_have_lost_revenue_USD"
+			        }
+			      ]
+			    },
+			    "project_flow_has_capex_USD": {
+			      "Binding": {
+			        "ConceptualEntity": "ProjectFlows"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "project_flow": {
+			          "Target": {
+			            "Entity": "project_flow"
+			          }
+			        },
+			        "project_flow.capex_USD": {
+			          "Target": {
+			            "Entity": "project_flow.capex_USD"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "project_flow"
+			            },
+			            "Object": {
+			              "Role": "project_flow.capex_USD"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "project_flows_have_capex_USD"
+			        }
+			      ]
+			    },
+			    "project_flow_has_end_date": {
+			      "Binding": {
+			        "ConceptualEntity": "ProjectFlows"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "project_flow": {
+			          "Target": {
+			            "Entity": "project_flow"
+			          }
+			        },
+			        "project_flow.end_date": {
+			          "Target": {
+			            "Entity": "project_flow.end_date"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "project_flow"
+			            },
+			            "Object": {
+			              "Role": "project_flow.end_date"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "project_flows_have_end_dates"
+			        }
+			      ]
+			    },
+			    "project_flow_has_start_date": {
+			      "Binding": {
+			        "ConceptualEntity": "ProjectFlows"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "project_flow": {
+			          "Target": {
+			            "Entity": "project_flow"
+			          }
+			        },
+			        "project_flow.start_date": {
+			          "Target": {
+			            "Entity": "project_flow.start_date"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "project_flow"
+			            },
+			            "Object": {
+			              "Role": "project_flow.start_date"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "project_flows_have_start_dates"
+			        }
+			      ]
+			    },
+			    "project_flow_has_month": {
+			      "Binding": {
+			        "ConceptualEntity": "ProjectFlows"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "project_flow": {
+			          "Target": {
+			            "Entity": "project_flow"
+			          }
+			        },
+			        "project_flow.month": {
+			          "Target": {
+			            "Entity": "project_flow.month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "project_flow"
+			            },
+			            "Object": {
+			              "Role": "project_flow.month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "project_flows_have_months"
+			        }
+			      ]
+			    },
+			    "project_flow_has_entity__measure_cumulative_net_cash_flow": {
+			      "Binding": {
+			        "ConceptualEntity": "ProjectFlows"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "project_flow": {
+			          "Target": {
+			            "Entity": "project_flow"
+			          }
+			        },
+			        "entity__measure.cumulative_net_cash_flow": {
+			          "Target": {
+			            "Entity": "entity__measure.cumulative_net_cash_flow"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "project_flow"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.cumulative_net_cash_flow"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "project_flows_have_cumulative_net_cash_flow"
+			        }
+			      ]
+			    },
+			    "project_flow_has_entity__measure_runrate_profit_2032": {
+			      "Binding": {
+			        "ConceptualEntity": "ProjectFlows"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "project_flow": {
+			          "Target": {
+			            "Entity": "project_flow"
+			          }
+			        },
+			        "entity__measure.runrate_profit_2032": {
+			          "Target": {
+			            "Entity": "entity__measure.runrate_profit_2032"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "project_flow"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.runrate_profit_2032"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "project_flows_have_runrate_profit_2032"
+			        }
+			      ]
+			    },
+			    "project_flow_has_entity__measure_NPV_to_2032": {
+			      "Binding": {
+			        "ConceptualEntity": "ProjectFlows"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "project_flow": {
+			          "Target": {
+			            "Entity": "project_flow"
+			          }
+			        },
+			        "entity__measure.NPV_to_2032": {
+			          "Target": {
+			            "Entity": "entity__measure.NPV_to_2032"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "project_flow"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.NPV_to_2032"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "project_flows_have_NPV_to_2032"
+			        }
+			      ]
+			    },
+			    "project_flow_has_entity__measure_net_cash_flow": {
+			      "Binding": {
+			        "ConceptualEntity": "ProjectFlows"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "project_flow": {
+			          "Target": {
+			            "Entity": "project_flow"
+			          }
+			        },
+			        "entity__measure.net_cash_flow": {
+			          "Target": {
+			            "Entity": "entity__measure.net_cash_flow"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "project_flow"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.net_cash_flow"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "project_flows_have_net_cash_flow"
+			        }
+			      ]
+			    },
+			    "project_flow_has_entity__measure_revenue_lost_during_works": {
+			      "Binding": {
+			        "ConceptualEntity": "ProjectFlows"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "project_flow": {
+			          "Target": {
+			            "Entity": "project_flow"
+			          }
+			        },
+			        "entity__measure.revenue_lost_during_works": {
+			          "Target": {
+			            "Entity": "entity__measure.revenue_lost_during_works"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "project_flow"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.revenue_lost_during_works"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "project_flows_have_revenue_lost_during_works"
+			        }
+			      ]
+			    },
+			    "project_flow_has_entity__measure_incremental_operating_profit": {
+			      "Binding": {
+			        "ConceptualEntity": "ProjectFlows"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "project_flow": {
+			          "Target": {
+			            "Entity": "project_flow"
+			          }
+			        },
+			        "entity__measure.incremental_operating_profit": {
+			          "Target": {
+			            "Entity": "entity__measure.incremental_operating_profit"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "project_flow"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.incremental_operating_profit"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "project_flows_have_incremental_operating_profit"
+			        }
+			      ]
+			    },
+			    "project_flow_has_entity__measure_investment_capex": {
+			      "Binding": {
+			        "ConceptualEntity": "ProjectFlows"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "project_flow": {
+			          "Target": {
+			            "Entity": "project_flow"
+			          }
+			        },
+			        "entity__measure.investment_capex": {
+			          "Target": {
+			            "Entity": "entity__measure.investment_capex"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "project_flow"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.investment_capex"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "project_flows_have_investment_capex"
+			        }
+			      ]
+			    },
+			    "investment_project_has_entity__measure_budget_remaining": {
+			      "Binding": {
+			        "ConceptualEntity": "InvestmentProjects"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "investment_project": {
+			          "Target": {
+			            "Entity": "investment_project"
+			          }
+			        },
+			        "entity__measure.budget_remaining": {
+			          "Target": {
+			            "Entity": "entity__measure.budget_remaining"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "investment_project"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.budget_remaining"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "investment_projects_have_budget_remaining"
+			        }
+			      ]
+			    },
+			    "brand_has_entity__measure_budget_remaining": {
+			      "Binding": {
+			        "ConceptualEntity": "Brands"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "brand": {
+			          "Target": {
+			            "Entity": "brand"
+			          }
+			        },
+			        "entity__measure.budget_remaining": {
+			          "Target": {
+			            "Entity": "entity__measure.budget_remaining"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "brand"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.budget_remaining"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "brands_have_budget_remaining"
+			        }
+			      ]
+			    },
+			    "investment_project_has_entity__measure_portfolio_capex": {
+			      "Binding": {
+			        "ConceptualEntity": "InvestmentProjects"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "investment_project": {
+			          "Target": {
+			            "Entity": "investment_project"
+			          }
+			        },
+			        "entity__measure.portfolio_capex": {
+			          "Target": {
+			            "Entity": "entity__measure.portfolio_capex"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "investment_project"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.portfolio_capex"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "investment_projects_have_portfolio_capex"
+			        },
+			        {
+			          "Adjective": {
+			            "Subject": {
+			              "Role": "investment_project"
+			            },
+			            "Adjectives": [
+			              {
+			                "INVESTED": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Measurement": {
+			              "Role": "entity__measure.portfolio_capex"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "portfolio_capex_indicates_how_INVESTED_investment_projects_are"
+			        }
+			      ]
+			    },
+			    "brand_has_entity__measure_brand_budget": {
+			      "Binding": {
+			        "ConceptualEntity": "Brands"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "brand": {
+			          "Target": {
+			            "Entity": "brand"
+			          }
+			        },
+			        "entity__measure.brand_budget": {
+			          "Target": {
+			            "Entity": "entity__measure.brand_budget"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "brand"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.brand_budget"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "brands_have_brand_budget"
+			        }
+			      ]
+			    },
+			    "scenario_has_entity__measure_scenario_used": {
+			      "Binding": {
+			        "ConceptualEntity": "Scenario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "scenario": {
+			          "Target": {
+			            "Entity": "scenario"
+			          }
+			        },
+			        "entity__measure.scenario_used": {
+			          "Target": {
+			            "Entity": "entity__measure.scenario_used"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "scenario"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.scenario_used"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "scenarios_have_scenario_used"
+			        }
+			      ]
+			    },
+			    "monthly_performance_has_entity__measure_complaints_change_": {
+			      "Binding": {
+			        "ConceptualEntity": "MonthlyPerformance"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "monthly_performance": {
+			          "Target": {
+			            "Entity": "monthly_performance"
+			          }
+			        },
+			        "entity__measure.complaints_change_": {
+			          "Target": {
+			            "Entity": "entity__measure.complaints_change_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "monthly_performance"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.complaints_change_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "monthly_performances_have_complaints_change_"
+			        }
+			      ]
+			    },
+			    "guest_complaint_has_entity__measure_complaints_change_": {
+			      "Binding": {
+			        "ConceptualEntity": "GuestComplaints"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "guest_complaint": {
+			          "Target": {
+			            "Entity": "guest_complaint"
+			          }
+			        },
+			        "entity__measure.complaints_change_": {
+			          "Target": {
+			            "Entity": "entity__measure.complaints_change_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "guest_complaint"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.complaints_change_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "guest_complaints_have_complaints_change_"
+			        }
+			      ]
+			    },
+			    "investment_project_has_recommended": {
+			      "Binding": {
+			        "ConceptualEntity": "InvestmentProjects"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "investment_project": {
+			          "Target": {
+			            "Entity": "investment_project"
+			          }
+			        },
+			        "investment_project.recommended": {
+			          "Target": {
+			            "Entity": "investment_project.recommended"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "investment_project"
+			            },
+			            "Object": {
+			              "Role": "investment_project.recommended"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "investment_projects_have_recommended"
+			        },
+			        {
+			          "DynamicAdjective": {
+			            "Subject": {
+			              "Role": "investment_project"
+			            },
+			            "Adjective": {
+			              "Role": "investment_project.recommended"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "recommended_describe_investment_projects"
 			        }
 			      ]
 			    },
@@ -25248,6 +29136,48 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
+			    "project_flow_is_ended_on_end_date": {
+			      "Binding": {
+			        "ConceptualEntity": "ProjectFlows"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "project_flow": {
+			          "Target": {
+			            "Entity": "project_flow"
+			          }
+			        },
+			        "project_flow.end_date": {
+			          "Target": {
+			            "Entity": "project_flow.end_date"
+			          }
+			        }
+			      },
+			      "SemanticSlots": {
+			        "When": {
+			          "Role": "project_flow.end_date"
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Verb": {
+			            "Verbs": [
+			              {
+			                "end": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "project_flow"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.9,
+			          "ID": "project_flows_are_ended_on_end_dates"
+			        }
+			      ]
+			    },
 			    "renovation_is_ended_on_end_date": {
 			      "Binding": {
 			        "ConceptualEntity": "Renovations"
@@ -25371,105 +29301,6 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.9,
 			          "ID": "hotels_are_opened_on_opening_dates"
-			        }
-			      ]
-			    },
-			    "hotel_last_renovation_date_date_hierarchy_has_hotel_last_renovation_date_month": {
-			      "Binding": {
-			        "ConceptualEntity": "Hotels"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "hotel.last_renovation_date.date_hierarchy": {
-			          "Target": {
-			            "Entity": "hotel.last_renovation_date.date_hierarchy"
-			          }
-			        },
-			        "hotel.last_renovation_date.month": {
-			          "Target": {
-			            "Entity": "hotel.last_renovation_date.month"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "hotel.last_renovation_date.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "hotel.last_renovation_date.month"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "last_renovation_date_hierarchies_have_last_renovation_months"
-			        }
-			      ]
-			    },
-			    "hotel_last_renovation_date_date_hierarchy_has_hotel_last_renovation_date_day": {
-			      "Binding": {
-			        "ConceptualEntity": "Hotels"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "hotel.last_renovation_date.date_hierarchy": {
-			          "Target": {
-			            "Entity": "hotel.last_renovation_date.date_hierarchy"
-			          }
-			        },
-			        "hotel.last_renovation_date.day": {
-			          "Target": {
-			            "Entity": "hotel.last_renovation_date.day"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "hotel.last_renovation_date.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "hotel.last_renovation_date.day"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "last_renovation_date_hierarchies_have_last_renovation_days"
-			        }
-			      ]
-			    },
-			    "hotel_product_date_has_date_hierarchy": {
-			      "Binding": {
-			        "ConceptualEntity": "Hotels"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "hotel.product_date": {
-			          "Target": {
-			            "Entity": "hotel.product_date"
-			          }
-			        },
-			        "hotel.product_date.date_hierarchy": {
-			          "Target": {
-			            "Entity": "hotel.product_date.date_hierarchy"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "hotel.product_date"
-			            },
-			            "Object": {
-			              "Role": "hotel.product_date.date_hierarchy"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "product_dates_have_product_date_hierarchies"
 			        }
 			      ]
 			    },
@@ -25932,6 +29763,171 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "end_date_hierarchies_have_end_days"
+			        }
+			      ]
+			    },
+			    "project_flow_end_date_has_date_hierarchy": {
+			      "Binding": {
+			        "ConceptualEntity": "ProjectFlows"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "project_flow.end_date": {
+			          "Target": {
+			            "Entity": "project_flow.end_date"
+			          }
+			        },
+			        "project_flow.end_date.date_hierarchy": {
+			          "Target": {
+			            "Entity": "project_flow.end_date.date_hierarchy"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "project_flow.end_date"
+			            },
+			            "Object": {
+			              "Role": "project_flow.end_date.date_hierarchy"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "end_dates_have_end_date_hierarchies1"
+			        }
+			      ]
+			    },
+			    "project_flow_end_date_date_hierarchy_has_project_flow_end_date_year": {
+			      "Binding": {
+			        "ConceptualEntity": "ProjectFlows"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "project_flow.end_date.date_hierarchy": {
+			          "Target": {
+			            "Entity": "project_flow.end_date.date_hierarchy"
+			          }
+			        },
+			        "project_flow.end_date.year": {
+			          "Target": {
+			            "Entity": "project_flow.end_date.year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "project_flow.end_date.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "project_flow.end_date.year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "end_date_hierarchies_have_end_years1"
+			        }
+			      ]
+			    },
+			    "project_flow_end_date_date_hierarchy_has_project_flow_end_date_quarter": {
+			      "Binding": {
+			        "ConceptualEntity": "ProjectFlows"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "project_flow.end_date.date_hierarchy": {
+			          "Target": {
+			            "Entity": "project_flow.end_date.date_hierarchy"
+			          }
+			        },
+			        "project_flow.end_date.quarter": {
+			          "Target": {
+			            "Entity": "project_flow.end_date.quarter"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "project_flow.end_date.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "project_flow.end_date.quarter"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "end_date_hierarchies_have_end_quarters1"
+			        }
+			      ]
+			    },
+			    "project_flow_end_date_date_hierarchy_has_project_flow_end_date_month": {
+			      "Binding": {
+			        "ConceptualEntity": "ProjectFlows"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "project_flow.end_date.date_hierarchy": {
+			          "Target": {
+			            "Entity": "project_flow.end_date.date_hierarchy"
+			          }
+			        },
+			        "project_flow.end_date.month": {
+			          "Target": {
+			            "Entity": "project_flow.end_date.month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "project_flow.end_date.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "project_flow.end_date.month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "end_date_hierarchies_have_end_months1"
+			        }
+			      ]
+			    },
+			    "project_flow_end_date_date_hierarchy_has_project_flow_end_date_day": {
+			      "Binding": {
+			        "ConceptualEntity": "ProjectFlows"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "project_flow.end_date.date_hierarchy": {
+			          "Target": {
+			            "Entity": "project_flow.end_date.date_hierarchy"
+			          }
+			        },
+			        "project_flow.end_date.day": {
+			          "Target": {
+			            "Entity": "project_flow.end_date.day"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "project_flow.end_date.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "project_flow.end_date.day"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "end_date_hierarchies_have_end_days1"
 			        }
 			      ]
 			    }

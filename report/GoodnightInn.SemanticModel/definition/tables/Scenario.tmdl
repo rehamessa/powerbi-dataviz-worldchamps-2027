@@ -6,6 +6,9 @@ table Scenario
 		lineageTag: 6aa88b82-8d86-4e8a-851f-f2e77c565a15
 		summarizeBy: none
 		sourceColumn: Scenario
+		sortByColumn: ScenarioOrder
+
+		changedProperty = SortByColumn
 
 		annotation SummarizationSetBy = Automatic
 

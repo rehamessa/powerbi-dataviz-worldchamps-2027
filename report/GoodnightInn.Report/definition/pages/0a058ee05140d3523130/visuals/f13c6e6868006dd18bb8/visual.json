@@ -4,10 +4,10 @@
   "position": {
     "x": 24.12881267181568,
     "y": 630.96845136798,
-    "z": 6005,
+    "z": 11000,
     "height": 77.212200549810177,
     "width": 170.10812933630055,
-    "tabOrder": 6004
+    "tabOrder": 10000
   },
   "visual": {
     "visualType": "textbox",
@@ -26,8 +26,7 @@
                       "color": "#9196be"
                     }
                   }
-                ],
-                "listType": "bullet"
+                ]
               },
               {
                 "textRuns": [
@@ -39,8 +38,7 @@
                       "color": "#9196be"
                     }
                   }
-                ],
-                "listType": "bullet"
+                ]
               },
               {
                 "textRuns": [

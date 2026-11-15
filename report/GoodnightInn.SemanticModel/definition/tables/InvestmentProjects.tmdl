@@ -140,6 +140,68 @@ table InvestmentProjects
 
 		annotation SummarizationSetBy = Automatic
 
+	column Solves =
+			
+			SWITCH (
+			    InvestmentProjects[ProjectID],
+			    "GI-01", "OTA dependence",
+			    "GI-02", "Check-in waits",
+			    "GI-03", "Cost inflation",
+			    "GI-04", "Airport demand",
+			    "GI-05", "Airport demand",
+			    "GI-09", "Guest experience",
+			    "GI-10", "Flat room rates",
+			    "GI-06", "Capacity",
+			    "GI-07", "Room condition",
+			    "GI-08", "New market"
+			)
+		lineageTag: 4f5abd72-77e9-493c-a740-c0f29dfb7ce9
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Payback Years' =
+			
+			DIVIDE (
+			    InvestmentProjects[CapexUSD],
+			    LOOKUPVALUE (
+			        InvestmentScenarios[AnnualOperatingProfitImpactUSD],
+			        InvestmentScenarios[ProjectID], InvestmentProjects[ProjectID],
+			        InvestmentScenarios[Scenario], "Expected"
+			    )
+			)
+		formatString: 0.0
+		lineageTag: 6b797d99-cee1-4aad-ab22-aee17d487ece
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Short Name' =
+			
+			SWITCH (
+			    InvestmentProjects[ProjectID],
+			    "GI-01", "Direct booking app",
+			    "GI-02", "Self check-in kiosks",
+			    "GI-03", "Energy efficiency",
+			    "GI-04", "Toronto +40 rooms",
+			    "GI-05", "Gatwick +40 rooms",
+			    "GI-06", "Kingston +40 rooms",
+			    "GI-07", "Room refresh, 10 hotels",
+			    "GI-08", "New Boston airport hotel",
+			    "GI-09", "Breakfast upgrade",
+			    "GI-10", "Smart pricing"
+			)
+		lineageTag: 084bcedd-2da8-4d8d-aa05-4d8983a93bbd
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column Type = IF ( InvestmentProjects[GrowthInitiative] = "Yes", "Growth", "Efficiency" )
+		lineageTag: a37a6e28-ad3d-48f0-a702-a5561282c8c0
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
 	partition InvestmentProjects = m
 		mode: import
 		source =

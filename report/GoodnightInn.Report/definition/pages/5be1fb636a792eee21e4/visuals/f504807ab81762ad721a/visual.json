@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "f504807ab81762ad721a",
   "position": {
-    "x": 228.01727974865818,
-    "y": 16,
+    "x": 227.47358309317966,
+    "y": 15.984630163304516,
     "z": 7000,
-    "height": 64,
-    "width": 720,
-    "tabOrder": 7000
+    "height": 72.545629202689724,
+    "width": 775.86935638808836,
+    "tabOrder": 8000
   },
   "visual": {
     "visualType": "textbox",
@@ -19,10 +19,29 @@
               {
                 "textRuns": [
                   {
-                    "value": "Full rooms, fading loyalty",
+                    "value": "Win guests back direct, grow where demand overflows",
                     "textStyle": {
+                      "fontWeight": "bold",
                       "fontSize": "20pt"
                     }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Where should the $60M go, and what will it return by 2032?",
+                    "textStyle": {
+                      "fontSize": "11pt",
+                      "color": "#9196be"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
                   }
                 ]
               }

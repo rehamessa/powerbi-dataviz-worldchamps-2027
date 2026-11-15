@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "fe40edc0ee12a4b8b8eb",
   "position": {
-    "x": 756,
-    "y": 469,
+    "x": 768.49183477425561,
+    "y": 218.866474543708,
     "z": 4000,
     "height": 239,
     "width": 512.06184321777994,
-    "tabOrder": 4000
+    "tabOrder": 5000
   },
   "visual": {
     "visualType": "barChart",
@@ -20,15 +20,33 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "GuestComplaints"
+                      "Entity": "InvestmentProjects"
                     }
                   },
-                  "Property": "Category"
+                  "Property": "Short Name"
                 }
               },
-              "queryRef": "GuestComplaints.Category",
-              "nativeQueryRef": "Category",
+              "queryRef": "InvestmentProjects.Short Name",
+              "nativeQueryRef": "Short Name",
               "active": true
+            }
+          ]
+        },
+        "Series": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "InvestmentProjects"
+                    }
+                  },
+                  "Property": "Recommended"
+                }
+              },
+              "queryRef": "InvestmentProjects.Recommended",
+              "nativeQueryRef": "Recommended"
             }
           ]
         },
@@ -36,17 +54,22 @@
           "projections": [
             {
               "field": {
-                "Measure": {
+                "Aggregation": {
                   "Expression": {
-                    "SourceRef": {
-                      "Entity": "_Measures"
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "InvestmentProjects"
+                        }
+                      },
+                      "Property": "CapexUSD"
                     }
                   },
-                  "Property": "Complaints Change %"
+                  "Function": 0
                 }
               },
-              "queryRef": "_Measures.Complaints Change %",
-              "nativeQueryRef": "Complaints Change %"
+              "queryRef": "Sum(InvestmentProjects.CapexUSD)",
+              "nativeQueryRef": "Sum of CapexUSD"
             }
           ]
         }
@@ -55,13 +78,18 @@
         "sort": [
           {
             "field": {
-              "Measure": {
+              "Aggregation": {
                 "Expression": {
-                  "SourceRef": {
-                    "Entity": "_Measures"
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "InvestmentProjects"
+                      }
+                    },
+                    "Property": "CapexUSD"
                   }
                 },
-                "Property": "Complaints Change %"
+                "Function": 0
               }
             },
             "direction": "Descending"
@@ -110,7 +138,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "9D"
+                  "Value": "8D"
                 }
               }
             },
@@ -139,6 +167,20 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            },
+            "labelDisplayUnits": {
+              "expr": {
+                "Literal": {
+                  "Value": "1000000D"
+                }
+              }
+            },
+            "labelPosition": {
+              "expr": {
+                "Literal": {
+                  "Value": "'InsideBase'"
                 }
               }
             }
@@ -443,7 +485,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Check-in and room complaints are rising fastest'"
+                  "Value": "'$41M funds 7 initiatives; the 3 costliest are left out'"
                 }
               }
             }
@@ -463,7 +505,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Change in complaints per 1,000 room nights, 2021 → 2025'"
+                  "Value": "'Capex by initiative'"
                 }
               }
             }
