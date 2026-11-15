@@ -326,6 +326,13 @@ table _Measures
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	measure 'Cash Out' =
+			
+			- ( [Investment Capex] + [Revenue Lost During Works] )
+		lineageTag: e87b6409-6ff1-4c89-9681-7e191f958b0d
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	column Column
 		formatString: 0
 		lineageTag: 0535f51a-b77f-4758-b6d4-8241dd73f7b5

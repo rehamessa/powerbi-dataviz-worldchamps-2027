@@ -5,8 +5,8 @@
     "x": 28.280499519692604,
     "y": 200.42267050912585,
     "z": 9000,
-    "height": 90,
-    "width": 168.45341018251682,
+    "height": 180.74927953890491,
+    "width": 156.15754082612872,
     "tabOrder": 9000
   },
   "visual": {
@@ -150,6 +150,39 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "padding": [
+        {
+          "properties": {
+            "bottom": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            },
+            "top": {
+              "expr": {
+                "Literal": {
+                  "Value": "20D"
                 }
               }
             }
