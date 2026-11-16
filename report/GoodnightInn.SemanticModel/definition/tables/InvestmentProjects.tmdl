@@ -202,6 +202,15 @@ table InvestmentProjects
 
 		annotation SummarizationSetBy = Automatic
 
+	column 'Why Not' =
+			
+			"Pays back in " & FORMAT ( InvestmentProjects[Payback Years], "0.0" ) & " yrs"
+			    & " · ready " & YEAR ( EDATE ( InvestmentProjects[EarliestStart], InvestmentProjects[DurationMonths] ) )
+		lineageTag: 55d5ec9d-3ae7-4196-9996-6fddb2975fb2
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
 	partition InvestmentProjects = m
 		mode: import
 		source =

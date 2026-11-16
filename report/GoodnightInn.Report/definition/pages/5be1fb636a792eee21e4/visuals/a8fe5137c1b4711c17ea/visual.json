@@ -310,7 +310,7 @@
                 "color": {
                   "expr": {
                     "ThemeDataColor": {
-                      "ColorId": 7,
+                      "ColorId": 3,
                       "Percent": 0
                     }
                   }

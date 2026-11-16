@@ -46,7 +46,8 @@
                 }
               },
               "queryRef": "_Measures.Occupancy %",
-              "nativeQueryRef": "Occupancy %"
+              "nativeQueryRef": "Occupancy ",
+              "displayName": "Occupancy "
             }
           ]
         },

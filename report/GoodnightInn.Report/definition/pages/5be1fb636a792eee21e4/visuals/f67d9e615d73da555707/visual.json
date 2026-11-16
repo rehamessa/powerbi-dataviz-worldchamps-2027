@@ -2,55 +2,18 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "f67d9e615d73da555707",
   "position": {
-    "x": 747.58885686839585,
-    "y": 480.7684918347743,
+    "x": 821.52952565343662,
+    "y": 442.36205227492741,
     "z": 2000,
-    "height": 239,
-    "width": 512.06184321777994,
+    "height": 277.56050338818977,
+    "width": 423.77541142303971,
     "tabOrder": 2000
   },
   "visual": {
-    "visualType": "areaChart",
+    "visualType": "tableEx",
     "query": {
       "queryState": {
-        "Category": {
-          "projections": [
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Date"
-                    }
-                  },
-                  "Property": "Year"
-                }
-              },
-              "queryRef": "Date.Year",
-              "nativeQueryRef": "Year",
-              "active": true
-            }
-          ]
-        },
-        "Rows": {
-          "projections": [
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "InvestmentProjects"
-                    }
-                  },
-                  "Property": "Recommended"
-                }
-              },
-              "queryRef": "InvestmentProjects.Recommended",
-              "nativeQueryRef": "Recommended"
-            }
-          ]
-        },
-        "Y": {
+        "Values": {
           "projections": [
             {
               "field": {
@@ -60,239 +23,55 @@
                       "Entity": "_Measures"
                     }
                   },
-                  "Property": "Direct Share %"
+                  "Property": "Not Funded Panel"
                 }
               },
-              "queryRef": "_Measures.Direct Share %",
-              "nativeQueryRef": "Direct Share %"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "_Measures"
-                    }
-                  },
-                  "Property": "OTA Share %"
-                }
-              },
-              "queryRef": "_Measures.OTA Share %",
-              "nativeQueryRef": "OTA Share %"
+              "queryRef": "_Measures.Not Funded Panel",
+              "nativeQueryRef": "  ",
+              "displayName": "  "
             }
           ]
         }
       },
       "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Measure": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "_Measures"
-                  }
-                },
-                "Property": "Direct Share %"
-              }
-            },
-            "direction": "Descending"
-          }
-        ],
         "isDefaultSort": true
       }
     },
     "objects": {
-      "lineStyles": [
+      "grid": [
         {
           "properties": {
-            "showMarker": {
+            "imageWidth": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "400D"
                 }
               }
             },
-            "areaShow": {
+            "imageHeight": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "239D"
                 }
               }
             },
-            "strokeWidth": {
-              "expr": {
-                "Literal": {
-                  "Value": "3D"
-                }
-              }
-            },
-            "markerSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "6D"
-                }
-              }
-            },
-            "markerShape": {
-              "expr": {
-                "Literal": {
-                  "Value": "'circle'"
-                }
-              }
-            }
-          }
-        },
-        {
-          "properties": {
-            "strokeTransparency": {
+            "outlineStyle": {
               "expr": {
                 "Literal": {
                   "Value": "0D"
                 }
               }
             }
-          },
-          "selector": {
-            "metadata": "_Measures.OTA Share %"
           }
         }
       ],
-      "labels": [
+      "columnHeaders": [
         {
           "properties": {
-            "show": {
+            "columnAdjustment": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "enableBackground": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "color": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 1,
-                      "Percent": 0
-                    }
-                  }
-                }
-              }
-            },
-            "enableValueDataLabel": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "9D"
-                }
-              }
-            },
-            "labelPrecision": {
-              "expr": {
-                "Literal": {
-                  "Value": "0L"
-                }
-              }
-            },
-            "bold": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "enableDetailDataLabel": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "leaderLines": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "optimizeLabelDisplay": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            }
-          }
-        },
-        {
-          "properties": {
-            "showSeries": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "enableValueDataLabel": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "labelDisplayUnits": {
-              "expr": {
-                "Literal": {
-                  "Value": "1D"
-                }
-              }
-            },
-            "labelPosition": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Above'"
-                }
-              }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "8D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "_Measures.Direct Share %"
-          }
-        },
-        {
-          "properties": {
-            "enableValueDataLabel": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "labelPosition": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Above'"
+                  "Value": "'fitToContent'"
                 }
               }
             },
@@ -303,37 +82,7 @@
                 }
               }
             },
-            "labelDensity": {
-              "expr": {
-                "Literal": {
-                  "Value": "100L"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "_Measures.OTA Share %"
-          }
-        }
-      ],
-      "legend": [
-        {
-          "properties": {
-            "position": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Top'"
-                }
-              }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "8D"
-                }
-              }
-            },
-            "italic": {
+            "wordWrap": {
               "expr": {
                 "Literal": {
                   "Value": "false"
@@ -343,156 +92,13 @@
           }
         }
       ],
-      "categoryAxis": [
+      "total": [
         {
           "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "8D"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "valueAxis": [
-        {
-          "properties": {
-            "show": {
+            "totals": {
               "expr": {
                 "Literal": {
                   "Value": "false"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "dataPoint": [
-        {
-          "properties": {
-            "fill": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 6,
-                      "Percent": 0
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "data": [
-              {
-                "scopeId": {
-                  "Comparison": {
-                    "ComparisonKind": 0,
-                    "Left": {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Entity": "BookingChannels"
-                          }
-                        },
-                        "Property": "Channel"
-                      }
-                    },
-                    "Right": {
-                      "Literal": {
-                        "Value": "'Online Travel Agencies'"
-                      }
-                    }
-                  }
-                }
-              }
-            ]
-          }
-        },
-        {
-          "properties": {
-            "fill": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 5,
-                      "Percent": 0
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "data": [
-              {
-                "scopeId": {
-                  "Comparison": {
-                    "ComparisonKind": 0,
-                    "Left": {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Entity": "BookingChannels"
-                          }
-                        },
-                        "Property": "Channel"
-                      }
-                    },
-                    "Right": {
-                      "Literal": {
-                        "Value": "'Travel Agents & Tour Operators'"
-                      }
-                    }
-                  }
-                }
-              }
-            ]
-          }
-        },
-        {
-          "properties": {
-            "fill": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 6,
-                      "Percent": 0
-                    }
-                  }
-                }
-              }
-            },
-            "transparency": {
-              "expr": {
-                "Literal": {
-                  "Value": "85D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "_Measures.OTA Share %"
-          }
-        },
-        {
-          "properties": {
-            "transparency": {
-              "expr": {
-                "Literal": {
-                  "Value": "85D"
                 }
               }
             }
@@ -542,6 +148,66 @@
               "expr": {
                 "Literal": {
                   "Value": "'OTA share rose from 33% to 50%, while direct fell from 44% to 31%'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "padding": [
+        {
+          "properties": {
+            "top": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "left": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "right": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "bottom": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
                 }
               }
             }

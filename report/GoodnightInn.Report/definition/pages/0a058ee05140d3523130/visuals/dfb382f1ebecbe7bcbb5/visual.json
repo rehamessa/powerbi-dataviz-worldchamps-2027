@@ -46,7 +46,8 @@
                 }
               },
               "queryRef": "_Measures.Direct Share %",
-              "nativeQueryRef": "Direct Share %"
+              "nativeQueryRef": "Direct bookings",
+              "displayName": "Direct bookings"
             },
             {
               "field": {
@@ -60,7 +61,8 @@
                 }
               },
               "queryRef": "_Measures.OTA Share %",
-              "nativeQueryRef": "OTA Share %"
+              "nativeQueryRef": "OTAs",
+              "displayName": "OTAs"
             }
           ]
         }
