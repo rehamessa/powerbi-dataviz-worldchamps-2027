@@ -1,0 +1,128 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "65b4824aa80bb39603a0",
+  "position": {
+    "x": 24,
+    "y": 20,
+    "z": 1000,
+    "height": 400,
+    "width": 792,
+    "tabOrder": 9998000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "How we calculated",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Scope",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "value": " · Goodnight Inn only: 50 hotels, $60M budget. History 2021–2025, investment 2027–2031, impact measured through 2032."
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Profit per project",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "value": " · Annual operating profit impact from the dataset’s Low / Expected / High scenarios, in 2025 dollars, running costs included."
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Ramp-up",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "value": " · After a project finishes: 50% of its profit in year 1, 85% in year 2, 100% from year 3."
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Timing",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "value": " · Capex is spread evenly over each project’s duration from its earliest start. Self check-in kiosks start only after the booking app is live."
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Disruption",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "value": " · Rooms out of service earn nothing: % of rooms closed × the same month’s 2025 revenue at those hotels, counted as lost profit (the prudent reading)."
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Value",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "value": " · Cash discounted at 8% a year to January 2026. Nothing after 2032 is counted, so long paybacks look worse, by design."
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Brand review",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "value": " · Margin after distribution = gross operating profit minus channel fees, which monthly results leave out. NPS weighted by survey responses. Complaints per 1,000 room nights. Hotel age = years since last refresh, or since opening."
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "parentGroupName": "480276b45c81a78d4005"
+}
