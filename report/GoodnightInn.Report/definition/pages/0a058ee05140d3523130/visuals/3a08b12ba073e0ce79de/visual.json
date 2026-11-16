@@ -6,7 +6,7 @@
     "y": 469,
     "z": 3000,
     "height": 239,
-    "width": 512.06184321777994,
+    "width": 640,
     "tabOrder": 3000
   },
   "visual": {
@@ -152,7 +152,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             }
@@ -312,7 +312,7 @@
                 "color": {
                   "expr": {
                     "ThemeDataColor": {
-                      "ColorId": 4,
+                      "ColorId": 8,
                       "Percent": 0
                     }
                   }
@@ -322,7 +322,7 @@
             "width": {
               "expr": {
                 "Literal": {
-                  "Value": "4D"
+                  "Value": "2D"
                 }
               }
             },
@@ -332,7 +332,56 @@
                   "Value": "50D"
                 }
               }
+            },
+            "style": {
+              "expr": {
+                "Literal": {
+                  "Value": "'solid'"
+                }
+              }
             }
+          }
+        }
+      ],
+      "y1AxisReferenceLine": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "displayName": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Y-Axis Constant Line 1'"
+                }
+              }
+            },
+            "dataLabelShow": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "lineColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 3,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "1"
           }
         }
       ]
@@ -378,7 +427,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Hotels last refreshed 10+ years ago score −4.4 vs +7.2 for those refreshed in the last 5 years'"
+                  "Value": "'Red: last refreshed 10+ years ago (avg NPS −4.4) · Blue: under 5 years (+7.2)'"
                 }
               }
             }
@@ -392,6 +441,19 @@
               "expr": {
                 "Literal": {
                   "Value": "'Scatter of 50 hotels: NPS falls as years since last refresh rise. Hotels refreshed 10+ years ago average NPS -4.4 vs +7.2 for under 5 years.'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualTooltip": [
+        {
+          "properties": {
+            "section": {
+              "expr": {
+                "Literal": {
+                  "Value": "'8f8b33c098950980ae1d'"
                 }
               }
             }

@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "f67d9e615d73da555707",
   "position": {
-    "x": 821.52952565343662,
-    "y": 442.36205227492741,
+    "x": 860.192171750229,
+    "y": 437.93794999345459,
     "z": 1000,
-    "height": 277.56050338818977,
-    "width": 423.77541142303971,
+    "height": 282.30710826024347,
+    "width": 419.84134048959288,
     "tabOrder": 2000
   },
   "visual": {
@@ -32,9 +32,6 @@
             }
           ]
         }
-      },
-      "sortDefinition": {
-        "isDefaultSort": true
       }
     },
     "objects": {
@@ -221,6 +218,33 @@
               "expr": {
                 "Literal": {
                   "Value": "'Three unfunded projects pay back in over 12 years vs 5.2 for the funded plan. Cumulative cash by 2032 ranges from -$27.7M (Low) to +$5.5M (High). 41 of 50 hotels pass 10 years since refresh by 2030.'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualTooltip": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "showSentenceFormat": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "sentenceTemplate": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Not funded (Expected scenario)\n• Room refresh, 10 hotels: $29.5M, pays back in 12.6 yrs\n• New Boston airport hotel: $24.8M, pays back in 12.4 yrs\n• Kingston +40 rooms: $5.4M, pays back in 12.2 yrs\nThe funded plan pays back in 5.2 yrs.'"
                 }
               }
             }

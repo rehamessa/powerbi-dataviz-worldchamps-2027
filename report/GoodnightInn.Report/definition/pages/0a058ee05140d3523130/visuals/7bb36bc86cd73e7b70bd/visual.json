@@ -27,8 +27,9 @@
                 }
               },
               "queryRef": "Hotels.LocationType",
-              "nativeQueryRef": "LocationType",
-              "active": true
+              "nativeQueryRef": "Location Type",
+              "active": true,
+              "displayName": "Location Type"
             }
           ]
         }

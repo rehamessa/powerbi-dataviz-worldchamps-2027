@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
   "name": "5cebf062060059dd10da",
   "position": {
-    "x": 223.03969022265247,
-    "y": 74.346563407550832,
+    "x": 224,
+    "y": 88,
     "z": 9000,
-    "height": 140.01936108422072,
-    "width": 1052.0038722168442,
+    "height": 110,
+    "width": 1040,
     "tabOrder": 10000
   },
   "visual": {
@@ -31,6 +31,35 @@
                     }
                   },
                   "Property": "Recommendation Banner"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "visualLink": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "showDefaultTooltip": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "tooltip": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Fund 7 initiatives for $41.1M and keep $19.0M in reserve. Expected scenario: cumulative cash by 2032 is -$10.9M, so payback comes after 2032. Switch the scenario on the left to test the risk.'"
                 }
               }
             }

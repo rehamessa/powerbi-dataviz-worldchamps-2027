@@ -261,7 +261,7 @@
                   "howCreated": 1
                 },
                 {
-                  "name": "215f21e08b8407d04849",
+                  "name": "c224dd60c1904ebbbd0a",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -276,7 +276,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "2aaac9c936e8950b0a8b",
+                  "name": "39ffa81d9112eea0eb4e",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -291,7 +291,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "ae66237dce2ba85be0c4",
+                  "name": "14bc8ce3e21151ad4910",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -306,7 +306,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "85af19a7804c8bc9a829",
+                  "name": "60a433b41031037ee132",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -321,7 +321,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "3b262429d74147c2ca48",
+                  "name": "168bf2bc7dbe1a80b207",
                   "type": "Advanced",
                   "expression": {
                     "Aggregation": {
@@ -341,7 +341,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "7a69f5c0acc6030a3b4e",
+                  "name": "332a0dc30047bbb8533a",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -362,15 +362,20 @@
               "objects": {},
               "orderBy": [
                 {
-                  "Direction": 2,
+                  "Direction": 1,
                   "Expression": {
-                    "Measure": {
+                    "Aggregation": {
                       "Expression": {
-                        "SourceRef": {
-                          "Entity": "_Measures"
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "InvestmentProjects"
+                            }
+                          },
+                          "Property": "Payback Years"
                         }
                       },
-                      "Property": "Portfolio Capex"
+                      "Function": 1
                     }
                   }
                 }
@@ -381,7 +386,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "7596421299c4aa368069",
+                  "name": "a6e8e5e7eceea3322b4a",
                   "type": "Advanced",
                   "expression": {
                     "Measure": {
@@ -529,7 +534,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "94b4ae499888196705ee",
+                  "name": "8ef5d5cb6950d534aeae",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -544,7 +549,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "bd73a290399479030da1",
+                  "name": "e8872734d9c082646009",
                   "type": "Advanced",
                   "expression": {
                     "Aggregation": {
@@ -564,7 +569,7 @@
                   "howCreated": 0
                 },
                 {
-                  "name": "f94f0512166b3d309ed6",
+                  "name": "7a0781bcada081b22c57",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -641,7 +646,7 @@
             "filters": {
               "byExpr": [
                 {
-                  "name": "04c163f1a617b42190eb",
+                  "name": "e8468d64be430d27410e",
                   "type": "Categorical",
                   "expression": {
                     "Column": {
@@ -777,6 +782,12 @@
             }
           },
           "2431231a26d44ee92054": {
+            "singleVisual": {
+              "visualType": "actionButton",
+              "objects": {}
+            }
+          },
+          "b62941432756eb80ce50": {
             "singleVisual": {
               "visualType": "actionButton",
               "objects": {}

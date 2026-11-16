@@ -21,7 +21,8 @@
                   {
                     "value": "How we calculated",
                     "textStyle": {
-                      "fontWeight": "bold"
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
                     }
                   }
                 ]
@@ -31,11 +32,15 @@
                   {
                     "value": "Scope",
                     "textStyle": {
-                      "fontWeight": "bold"
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": " · Goodnight Inn only: 50 hotels, $60M budget. History 2021–2025, investment 2027–2031, impact measured through 2032."
+                    "value": " · Goodnight Inn only: 50 hotels, $60M budget. History 2021–2025, investment 2027–2031, impact measured through 2032.",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
                   }
                 ]
               },
@@ -44,11 +49,15 @@
                   {
                     "value": "Profit per project",
                     "textStyle": {
-                      "fontWeight": "bold"
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": " · Annual operating profit impact from the dataset’s Low / Expected / High scenarios, in 2025 dollars, running costs included."
+                    "value": " · Annual operating profit impact from the dataset’s Low / Expected / High scenarios, in 2025 dollars, running costs included.",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
                   }
                 ]
               },
@@ -57,11 +66,15 @@
                   {
                     "value": "Ramp-up",
                     "textStyle": {
-                      "fontWeight": "bold"
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": " · After a project finishes: 50% of its profit in year 1, 85% in year 2, 100% from year 3."
+                    "value": " · After a project finishes: 50% of its profit in year 1, 85% in year 2, 100% from year 3.",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
                   }
                 ]
               },
@@ -70,11 +83,15 @@
                   {
                     "value": "Timing",
                     "textStyle": {
-                      "fontWeight": "bold"
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": " · Capex is spread evenly over each project’s duration from its earliest start. Self check-in kiosks start only after the booking app is live."
+                    "value": " · Capex is spread evenly over each project’s duration from its earliest start. Self check-in kiosks start only after the booking app is live.",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
                   }
                 ]
               },
@@ -83,11 +100,15 @@
                   {
                     "value": "Disruption",
                     "textStyle": {
-                      "fontWeight": "bold"
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": " · Rooms out of service earn nothing: % of rooms closed × the same month’s 2025 revenue at those hotels, counted as lost profit (the prudent reading)."
+                    "value": " · Rooms out of service earn nothing: % of rooms closed × the same month’s 2025 revenue at those hotels, counted as lost profit (the prudent reading).",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
                   }
                 ]
               },
@@ -96,11 +117,15 @@
                   {
                     "value": "Value",
                     "textStyle": {
-                      "fontWeight": "bold"
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": " · Cash discounted at 8% a year to January 2026. Nothing after 2032 is counted, so long paybacks look worse, by design."
+                    "value": " · Cash discounted at 8% a year to January 2026. Nothing after 2032 is counted, so long paybacks look worse, by design.",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
                   }
                 ]
               },
@@ -109,11 +134,60 @@
                   {
                     "value": "Brand review",
                     "textStyle": {
-                      "fontWeight": "bold"
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
                     }
                   },
                   {
-                    "value": " · Margin after distribution = gross operating profit minus channel fees, which monthly results leave out. NPS weighted by survey responses. Complaints per 1,000 room nights. Hotel age = years since last refresh, or since opening."
+                    "value": " · Margin after distribution = gross operating profit minus channel fees, which monthly results leave out. NPS weighted by survey responses. Complaints per 1,000 room nights. Hotel age = years since last refresh, or since opening.",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Payback",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "11pt"
+                    }
+                  },
+                  {
+                    "value": " · If 2032 profits continue, the plan recovers its full cost during 2034",
+                    "textStyle": {
+                      "fontSize": "11pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
                   }
                 ]
               }

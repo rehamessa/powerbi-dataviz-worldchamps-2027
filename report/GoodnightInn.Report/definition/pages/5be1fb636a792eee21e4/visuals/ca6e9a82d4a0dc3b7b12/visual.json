@@ -5,8 +5,8 @@
     "x": 228,
     "y": 214,
     "z": 0,
-    "height": 238.53986551392893,
-    "width": 520.11527377521611,
+    "height": 239,
+    "width": 624,
     "tabOrder": 1000
   },
   "visual": {
@@ -117,16 +117,21 @@
         "sort": [
           {
             "field": {
-              "Measure": {
+              "Aggregation": {
                 "Expression": {
-                  "SourceRef": {
-                    "Entity": "_Measures"
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "InvestmentProjects"
+                      }
+                    },
+                    "Property": "Payback Years"
                   }
                 },
-                "Property": "Portfolio Capex"
+                "Function": 1
               }
             },
-            "direction": "Descending"
+            "direction": "Ascending"
           }
         ]
       }
@@ -179,7 +184,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "101.7195004803074D"
+                  "Value": "140.4347057853037D"
                 }
               }
             }
@@ -207,7 +212,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "91.12961676544556D"
+                  "Value": "105.5870408824814D"
                 }
               }
             }
@@ -221,7 +226,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "111.17867470520538D"
+                  "Value": "125.6331728327794D"
                 }
               }
             }
@@ -235,7 +240,7 @@
             "value": {
               "expr": {
                 "Literal": {
-                  "Value": "79.71237049394098D"
+                  "Value": "101.51003908737434D"
                 }
               }
             }

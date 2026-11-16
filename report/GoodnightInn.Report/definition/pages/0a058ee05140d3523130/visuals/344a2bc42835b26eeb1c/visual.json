@@ -6,8 +6,7 @@
     "y": 0,
     "z": 0,
     "height": 130.00000000000006,
-    "width": 1039.5378348071708,
-    "tabOrder": 2000
+    "width": 1039.5378348071708
   },
   "visual": {
     "visualType": "cardVisual",
@@ -568,6 +567,19 @@
               "expr": {
                 "Literal": {
                   "Value": "'2025 KPIs: occupancy 79.4%, ADR $106.82, margin after distribution 33.7%, NPS 3.3, OTA share 50%. Margin, NPS and OTA share worsened vs 2024.'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "visualTooltip": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }

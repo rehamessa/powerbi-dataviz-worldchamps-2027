@@ -467,6 +467,16 @@ table _Measures
 		lineageTag: b5fede9a-490a-47e4-8701-3453374f1084
 		dataCategory: ImageUrl
 
+	measure 'TT Hotel Title' =
+			
+			SELECTEDVALUE ( Hotels[HotelName] ) & " · " & SELECTEDVALUE ( Hotels[City] )
+		lineageTag: c50906a0-810d-4efd-991e-8ca9c91e8cbd
+
+	measure 'TT Years Since Refresh' =
+			
+			FORMAT ( SELECTEDVALUE ( Hotels[YearsSinceRefresh] ), "0.0" ) & " yrs since refresh"
+		lineageTag: 043de18f-f82a-4e0c-bd38-bff41c845893
+
 	column Column
 		formatString: 0
 		lineageTag: 0535f51a-b77f-4758-b6d4-8241dd73f7b5
