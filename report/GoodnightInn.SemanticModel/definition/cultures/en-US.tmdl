@@ -21531,141 +21531,131 @@ cultureInfo en-US
 			          }
 			        }
 			      ]
+			    },
+			    "entity__measure.recommendation_panel": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "_Measures",
+			          "ConceptualProperty": "Recommendation Banner"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "recommendation panel": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "panel": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "recommendation pane": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "recommendation rectangle": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "pane": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "rectangle": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "recommendation board": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "recommendation piece": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "recommendation sheet": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "recommendation plate": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "recommendation square": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "recommendation section": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
-			    "hotel_product_date_has_date_hierarchy": {
-			      "Binding": {
-			        "ConceptualEntity": "Hotels"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "hotel.product_date": {
-			          "Target": {
-			            "Entity": "hotel.product_date"
-			          }
-			        },
-			        "hotel.product_date.date_hierarchy": {
-			          "Target": {
-			            "Entity": "hotel.product_date.date_hierarchy"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "hotel.product_date"
-			            },
-			            "Object": {
-			              "Role": "hotel.product_date.date_hierarchy"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "product_dates_have_product_date_hierarchies"
-			        }
-			      ]
-			    },
-			    "hotel_last_renovation_date_date_hierarchy_has_hotel_last_renovation_date_day": {
-			      "Binding": {
-			        "ConceptualEntity": "Hotels"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "hotel.last_renovation_date.date_hierarchy": {
-			          "Target": {
-			            "Entity": "hotel.last_renovation_date.date_hierarchy"
-			          }
-			        },
-			        "hotel.last_renovation_date.day": {
-			          "Target": {
-			            "Entity": "hotel.last_renovation_date.day"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "hotel.last_renovation_date.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "hotel.last_renovation_date.day"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "last_renovation_date_hierarchies_have_last_renovation_days"
-			        }
-			      ]
-			    },
-			    "hotel_last_renovation_date_date_hierarchy_has_hotel_last_renovation_date_month": {
-			      "Binding": {
-			        "ConceptualEntity": "Hotels"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "hotel.last_renovation_date.date_hierarchy": {
-			          "Target": {
-			            "Entity": "hotel.last_renovation_date.date_hierarchy"
-			          }
-			        },
-			        "hotel.last_renovation_date.month": {
-			          "Target": {
-			            "Entity": "hotel.last_renovation_date.month"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "hotel.last_renovation_date.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "hotel.last_renovation_date.month"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "last_renovation_date_hierarchies_have_last_renovation_months"
-			        }
-			      ]
-			    },
-			    "hotel_last_renovation_date_date_hierarchy_has_hotel_last_renovation_date_quarter": {
-			      "Binding": {
-			        "ConceptualEntity": "Hotels"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "hotel.last_renovation_date.date_hierarchy": {
-			          "Target": {
-			            "Entity": "hotel.last_renovation_date.date_hierarchy"
-			          }
-			        },
-			        "hotel.last_renovation_date.quarter": {
-			          "Target": {
-			            "Entity": "hotel.last_renovation_date.quarter"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "hotel.last_renovation_date.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "hotel.last_renovation_date.quarter"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "last_renovation_date_hierarchies_have_last_renovation_quarters"
-			        }
-			      ]
-			    },
 			    "hotel_last_renovation_date_date_hierarchy_has_hotel_last_renovation_date_year": {
 			      "Binding": {
 			        "ConceptualEntity": "Hotels"
@@ -22902,6 +22892,138 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "hotels_have_booking_channels"
+			        }
+			      ]
+			    },
+			    "scenario_has_entity__measure_recommendation_panel": {
+			      "Binding": {
+			        "ConceptualEntity": "Scenario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "scenario": {
+			          "Target": {
+			            "Entity": "scenario"
+			          }
+			        },
+			        "entity__measure.recommendation_panel": {
+			          "Target": {
+			            "Entity": "entity__measure.recommendation_panel"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "scenario"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.recommendation_panel"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "scenarios_have_recommendation_panel"
+			        }
+			      ]
+			    },
+			    "project_flow_has_entity__measure_recommendation_panel": {
+			      "Binding": {
+			        "ConceptualEntity": "ProjectFlows"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "project_flow": {
+			          "Target": {
+			            "Entity": "project_flow"
+			          }
+			        },
+			        "entity__measure.recommendation_panel": {
+			          "Target": {
+			            "Entity": "entity__measure.recommendation_panel"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "project_flow"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.recommendation_panel"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "project_flows_have_recommendation_panel"
+			        }
+			      ]
+			    },
+			    "investment_project_has_entity__measure_recommendation_panel": {
+			      "Binding": {
+			        "ConceptualEntity": "InvestmentProjects"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "investment_project": {
+			          "Target": {
+			            "Entity": "investment_project"
+			          }
+			        },
+			        "entity__measure.recommendation_panel": {
+			          "Target": {
+			            "Entity": "entity__measure.recommendation_panel"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "investment_project"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.recommendation_panel"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "investment_projects_have_recommendation_panel"
+			        }
+			      ]
+			    },
+			    "brand_has_entity__measure_recommendation_panel": {
+			      "Binding": {
+			        "ConceptualEntity": "Brands"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "brand": {
+			          "Target": {
+			            "Entity": "brand"
+			          }
+			        },
+			        "entity__measure.recommendation_panel": {
+			          "Target": {
+			            "Entity": "entity__measure.recommendation_panel"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "brand"
+			            },
+			            "Object": {
+			              "Role": "entity__measure.recommendation_panel"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "brands_have_recommendation_panel"
 			        }
 			      ]
 			    },
@@ -29922,6 +30044,138 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.9,
 			          "ID": "hotels_are_opened_on_opening_dates"
+			        }
+			      ]
+			    },
+			    "hotel_last_renovation_date_date_hierarchy_has_hotel_last_renovation_date_quarter": {
+			      "Binding": {
+			        "ConceptualEntity": "Hotels"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "hotel.last_renovation_date.date_hierarchy": {
+			          "Target": {
+			            "Entity": "hotel.last_renovation_date.date_hierarchy"
+			          }
+			        },
+			        "hotel.last_renovation_date.quarter": {
+			          "Target": {
+			            "Entity": "hotel.last_renovation_date.quarter"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "hotel.last_renovation_date.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "hotel.last_renovation_date.quarter"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "last_renovation_date_hierarchies_have_last_renovation_quarters"
+			        }
+			      ]
+			    },
+			    "hotel_last_renovation_date_date_hierarchy_has_hotel_last_renovation_date_month": {
+			      "Binding": {
+			        "ConceptualEntity": "Hotels"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "hotel.last_renovation_date.date_hierarchy": {
+			          "Target": {
+			            "Entity": "hotel.last_renovation_date.date_hierarchy"
+			          }
+			        },
+			        "hotel.last_renovation_date.month": {
+			          "Target": {
+			            "Entity": "hotel.last_renovation_date.month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "hotel.last_renovation_date.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "hotel.last_renovation_date.month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "last_renovation_date_hierarchies_have_last_renovation_months"
+			        }
+			      ]
+			    },
+			    "hotel_last_renovation_date_date_hierarchy_has_hotel_last_renovation_date_day": {
+			      "Binding": {
+			        "ConceptualEntity": "Hotels"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "hotel.last_renovation_date.date_hierarchy": {
+			          "Target": {
+			            "Entity": "hotel.last_renovation_date.date_hierarchy"
+			          }
+			        },
+			        "hotel.last_renovation_date.day": {
+			          "Target": {
+			            "Entity": "hotel.last_renovation_date.day"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "hotel.last_renovation_date.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "hotel.last_renovation_date.day"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "last_renovation_date_hierarchies_have_last_renovation_days"
+			        }
+			      ]
+			    },
+			    "hotel_product_date_has_date_hierarchy": {
+			      "Binding": {
+			        "ConceptualEntity": "Hotels"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "hotel.product_date": {
+			          "Target": {
+			            "Entity": "hotel.product_date"
+			          }
+			        },
+			        "hotel.product_date.date_hierarchy": {
+			          "Target": {
+			            "Entity": "hotel.product_date.date_hierarchy"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "hotel.product_date"
+			            },
+			            "Object": {
+			              "Role": "hotel.product_date.date_hierarchy"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "product_dates_have_product_date_hierarchies"
 			        }
 			      ]
 			    },

@@ -779,6 +779,19 @@
             }
           }
         }
+      ],
+      "general": [
+        {
+          "properties": {
+            "altText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Cumulative cash 2026 to 2032: falls to -$40.6M in 2028, recovers to -$10.9M by 2032 in the Expected scenario.'"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "drillFilterOtherVisuals": true

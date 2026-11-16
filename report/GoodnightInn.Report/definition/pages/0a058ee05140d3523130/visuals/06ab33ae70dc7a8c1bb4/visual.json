@@ -469,6 +469,19 @@
             }
           }
         }
+      ],
+      "general": [
+        {
+          "properties": {
+            "altText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Complaints per 1,000 room nights, 2021 to 2025: check-in up 25%, room condition up 17%, other categories flat.'"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "drillFilterOtherVisuals": true

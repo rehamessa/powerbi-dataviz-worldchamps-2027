@@ -384,6 +384,19 @@
             }
           }
         }
+      ],
+      "general": [
+        {
+          "properties": {
+            "altText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Scatter of 50 hotels: NPS falls as years since last refresh rise. Hotels refreshed 10+ years ago average NPS -4.4 vs +7.2 for under 5 years.'"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "drillFilterOtherVisuals": true

@@ -903,6 +903,19 @@
             }
           }
         }
+      ],
+      "general": [
+        {
+          "properties": {
+            "altText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Seven funded initiatives sorted by payback, from direct booking app at 2.1 years to Toronto extension at 8.7 years; five are growth initiatives.'"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "drillFilterOtherVisuals": true

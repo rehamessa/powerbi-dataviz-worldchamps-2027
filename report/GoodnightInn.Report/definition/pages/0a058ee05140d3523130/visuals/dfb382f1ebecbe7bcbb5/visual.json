@@ -531,6 +531,19 @@
             }
           }
         }
+      ],
+      "general": [
+        {
+          "properties": {
+            "altText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'OTA share of room revenue rose from 33% to 50% and overtook direct bookings in 2023; direct fell from 44% to 31%.'"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "drillFilterOtherVisuals": true

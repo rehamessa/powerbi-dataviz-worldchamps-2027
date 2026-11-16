@@ -213,6 +213,19 @@
             }
           }
         }
+      ],
+      "general": [
+        {
+          "properties": {
+            "altText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Three unfunded projects pay back in over 12 years vs 5.2 for the funded plan. Cumulative cash by 2032 ranges from -$27.7M (Low) to +$5.5M (High). 41 of 50 hotels pass 10 years since refresh by 2030.'"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "drillFilterOtherVisuals": true

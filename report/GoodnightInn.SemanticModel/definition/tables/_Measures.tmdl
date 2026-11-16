@@ -416,6 +416,57 @@ table _Measures
 			IF ( SELECTEDVALUE ( InvestmentProjects[Type] ) = "Growth", "#2F5A9E", "#5B5B7A" )
 		lineageTag: fc63f3cf-71c6-49f0-a857-8c571bfeda25
 
+	measure 'Recommendation Banner' = ```
+			
+			VAR _s = [Scenario Used]
+			VAR _GI = FILTER ( ALL ( InvestmentProjects ), InvestmentProjects[Brand] = "Goodnight Inn" )
+			VAR _Funded = FILTER ( _GI, InvestmentProjects[Recommended] = "Funded" )
+			VAR _n = COUNTROWS ( _Funded )
+			VAR _Budget = [Brand Budget]
+			VAR _Inv = SUMX ( _Funded, InvestmentProjects[CapexUSD] )
+			VAR _Res = _Budget - _Inv
+			VAR _Profit =
+			    CALCULATE ( SUM ( ProjectFlows[ProfitImpactUSD] ),
+			        REMOVEFILTERS ( 'Date' ), REMOVEFILTERS ( Scenario ), REMOVEFILTERS ( InvestmentProjects ),
+			        ProjectFlows[Scenario] = _s, InvestmentProjects[Recommended] = "Funded", 'Date'[Year] = 2032 )
+			VAR _Cash =
+			    CALCULATE ( SUM ( ProjectFlows[NetCashFlowUSD] ),
+			        REMOVEFILTERS ( 'Date' ), REMOVEFILTERS ( Scenario ), REMOVEFILTERS ( InvestmentProjects ),
+			        ProjectFlows[Scenario] = _s, InvestmentProjects[Recommended] = "Funded" )
+			VAR _ok = _Cash >= 0
+			VAR _PayTxt = IF ( _ok, "Pays back by 2032", "Pays back after 2032" )
+			VAR _PayCol = IF ( _ok, "%232F5A9E", "%23B81C17" )
+			VAR _PayBg = IF ( _ok, "%23E8EDF6", "%23FCE9E8" )
+			VAR _CashTxt = IF ( _ok, "+$", "-$" ) & FORMAT ( ABS ( _Cash ) / 1000000, "0.0" ) & "M"
+			VAR _Div = "' y1='20' y2='90' stroke='%23EFE8DF'/>"
+			VAR _svg =
+			    "<svg xmlns='http://www.w3.org/2000/svg' width='1040' height='110' viewBox='0 0 1040 110' font-family='Segoe UI, Arial'>"
+			        & "<rect x='0.5' y='0.5' width='1039' height='109' rx='10' fill='%23FFFFFF' stroke='%23E6DCD2'/>"
+			        & "<rect x='0' y='0' width='6' height='110' rx='3' fill='%232F5A9E'/>"
+			        & "<text x='24' y='30' font-size='11' font-weight='600' fill='%235B5B7A' letter-spacing='0.8'>THE RECOMMENDATION</text>"
+			        & "<text x='24' y='56' font-size='17' font-weight='600' fill='%23252547'>Fund " & _n & ", hold the rest</text>"
+			        & "<rect x='24' y='70' width='168' height='24' rx='12' fill='" & _PayBg & "'/>"
+			        & "<text x='108' y='86' font-size='11' font-weight='600' fill='" & _PayCol & "' text-anchor='middle'>" & _PayTxt & "</text>"
+			        & "<line x1='224' x2='224" & _Div
+			        & "<text x='248' y='52' font-size='26' font-weight='600' fill='%23252547'>$" & FORMAT ( _Inv / 1000000, "0.0" ) & "M</text>"
+			        & "<text x='248' y='74' font-size='11' fill='%235B5B7A'>invested in " & _n & " initiatives</text>"
+			        & "<line x1='440' x2='440" & _Div
+			        & "<text x='464' y='52' font-size='26' font-weight='600' fill='%232F5A9E'>$" & FORMAT ( _Res / 1000000, "0.0" ) & "M</text>"
+			        & "<text x='464' y='74' font-size='11' fill='%235B5B7A'>held in reserve of $" & FORMAT ( _Budget / 1000000, "0" ) & "M</text>"
+			        & "<line x1='640' x2='640" & _Div
+			        & "<text x='664' y='52' font-size='26' font-weight='600' fill='%232F5A9E'>+$" & FORMAT ( _Profit / 1000000, "0.0" ) & "M</text>"
+			        & "<text x='664' y='74' font-size='11' fill='%235B5B7A'>profit per year from 2032 (" & _s & ")</text>"
+			        & "<line x1='860' x2='860" & _Div
+			        & "<text x='884' y='52' font-size='26' font-weight='600' fill='" & _PayCol & "'>" & _CashTxt & "</text>"
+			        & "<text x='884' y='74' font-size='11' fill='%235B5B7A'>cumulative cash by 2032</text>"
+			        & "</svg>"
+			RETURN
+			    "data:image/svg+xml;utf8," & _svg
+			
+			```
+		lineageTag: b5fede9a-490a-47e4-8701-3453374f1084
+		dataCategory: ImageUrl
+
 	column Column
 		formatString: 0
 		lineageTag: 0535f51a-b77f-4758-b6d4-8241dd73f7b5

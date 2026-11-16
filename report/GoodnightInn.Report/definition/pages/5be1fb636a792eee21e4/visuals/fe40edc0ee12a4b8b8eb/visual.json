@@ -511,6 +511,19 @@
             }
           }
         }
+      ],
+      "general": [
+        {
+          "properties": {
+            "altText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Capex for all 10 initiatives: 7 funded totaling $41M; room refresh, Boston hotel and Kingston extension not funded.'"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "drillFilterOtherVisuals": true

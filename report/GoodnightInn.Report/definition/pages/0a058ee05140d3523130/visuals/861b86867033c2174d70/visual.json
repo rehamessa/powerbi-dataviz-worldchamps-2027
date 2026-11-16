@@ -424,6 +424,19 @@
             }
           }
         }
+      ],
+      "general": [
+        {
+          "properties": {
+            "altText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'2021 to 2025: occupancy rose from 66.9% to 79.4% while NPS fell from 8.5 to 3.3.'"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "drillFilterOtherVisuals": true

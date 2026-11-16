@@ -175,6 +175,13 @@
                   "Value": "false"
                 }
               }
+            },
+            "altText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Choose Low, Expected or High scenario for all investment figures'"
+                }
+              }
             }
           }
         }

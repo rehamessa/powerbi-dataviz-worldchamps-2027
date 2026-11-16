@@ -560,6 +560,19 @@
             }
           }
         }
+      ],
+      "general": [
+        {
+          "properties": {
+            "altText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'2025 KPIs: occupancy 79.4%, ADR $106.82, margin after distribution 33.7%, NPS 3.3, OTA share 50%. Margin, NPS and OTA share worsened vs 2024.'"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "drillFilterOtherVisuals": true
